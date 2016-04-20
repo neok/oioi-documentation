@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # OIOI documentation build configuration file, created by
-# sphinx-quickstart2 on Wed Apr 20 17:39:03 2016.
+# sphinx-quickstart2 on Wed Apr 20 17:44:19 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -74,7 +74,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
