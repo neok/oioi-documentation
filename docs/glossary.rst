@@ -85,6 +85,11 @@ CDR
 .. note:: A CDR may be sent by a CPO before the session finished.
           For example to inform the EMP of a started session.
 
+.. _glossary-charging-key:
+
+Charging Key
+    The charging key is an RFID token that authenticates an :ref:`EV <glossary-ev>` driver at a :ref:`charging station <glossary-charging-station>`.
+
 .. _glossary-static-data:
 
 Static data
