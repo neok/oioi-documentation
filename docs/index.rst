@@ -12,10 +12,3 @@ Contents:
    :maxdepth: 2
 
    glossary.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
