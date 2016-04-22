@@ -20,8 +20,8 @@ The OIOI allows for this connection.
 The EMP can get information about charging stations and charging sessions.
 With the OIOI, the EMP can send requests to charge from the app and the charging key.
 
-Fundamentals OIOI
------------------
+Fundamentals of OIOI
+--------------------
 
 The following integration is required:
 

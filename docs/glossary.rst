@@ -102,5 +102,20 @@ Dynamic data
     Data that may change frequently.
     Statuses of connectors.
 
+.. _glossary-partner-identifier:
+
+Partner Identifier
+    A universally unique identifier that identifies the partner who issues an API call.
+    This is different from an API key!
+    The partner chooses the identifier and gives it to PlugSurfing in a secure manner.
+    Must be unique and hard to guess.
+    We remomend a random string that is at least 16 characters long.
+
+    A company with one API key can use multiple partner-identifiers,
+    for example to make API calls for another company.
+
+    At the same time, multiple API keys can use the same partner identifier to act
+    on behalf of that entity.
+
 .. _wikipedia ev:  https://en.wikipedia.org/wiki/Electric_vehicle
 .. _wikipedia charging station: https://en.wikipedia.org/wiki/Charging_station

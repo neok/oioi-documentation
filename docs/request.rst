@@ -44,11 +44,14 @@ Possible response codes and their meanings:
 +==========+==========================================================================================================+
 | ``200``  | **Success.**                                                                                             |
 |          | The request was handled successfully.                                                                    |
+|          |                                                                                                          |
 |          | The response body will contain more details about the message status in JSON format.                     |
 +----------+----------------------------------------------------------------------------------------------------------+
 | ``4xx``  | **Error.**                                                                                               |
 |          | Something was wrong with your request.                                                                   |
+|          |                                                                                                          |
 |          | The response body will contain more information in JSON format.                                          |
+|          |                                                                                                          |
 |          | The property error will contain more detailed information as to what was wrong.                          |
 +----------+----------------------------------------------------------------------------------------------------------+
 | ``400``  | **Bad request.**                                                                                         |
@@ -64,9 +67,12 @@ Possible response codes and their meanings:
 |          | One or more of the requested stations were not found.                                                    |
 +----------+----------------------------------------------------------------------------------------------------------+
 | ``5xx``  | **Server Error.**                                                                                        |
+|          |                                                                                                          |
 |          | Errors in the ``500``-``599`` range (such as ``500`` or ``503``)                                         |
 |          | indicate that there was an internal error in the PlugSurfing server while trying to process the request, |
 |          | or that the server is temporarily unavailable (for example, because of timeouts).                        |
+|          |                                                                                                          |
 |          | You must retry later, honoring any Retry-After header included in the response.                          |
+|          |                                                                                                          |
 |          | Your servers must implement exponential back-off.                                                        |
 +----------+----------------------------------------------------------------------------------------------------------+
