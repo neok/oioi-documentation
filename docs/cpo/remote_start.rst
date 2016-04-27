@@ -1,5 +1,3 @@
-.. highlight:: js
-
 .. _cpo-remote-start-docs:
 
 Receiving Remote Starts
@@ -12,11 +10,17 @@ we will send a ``session-start`` request.
 If the start is successful and the session is stoppable,
 the response has to contain a ``session-id``.
 
-.. include:: ../includes/session_start
+.. toctree::
+   :maxdepth: 2
+
+   ../calls/session_start
 
 Stopping a Session
 ------------------
 Whenever PlugSurfing wants to stop a running session,
 we will send a ``session-stop`` request.
 
-.. include:: ../includes/session_stop
+.. toctree::
+   :maxdepth: 2
+
+   ../calls/session_stop

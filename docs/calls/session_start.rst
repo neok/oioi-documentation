@@ -1,7 +1,9 @@
+.. highlight:: js
+
 Request/Response
 ~~~~~~~~~~~~~~~~
 
-``"session-stop"`` identifies the call as a session-stop call.
+``"session-start"`` identifies the call as a session-start call.
 
 Request fields
 """"""""""""""
@@ -18,15 +20,20 @@ user
 
    The token field is an optional field of type string and can be used to authenticate the user.
 connector-id
-   The EVSE ID that identifies the connector where the session should be stopped.
-session-id
-   A unique ID that identifies this session. Can be any string.
+   The EVSE ID that identifies the connector where the session should take place.
+payment-reference (optional)
+   Identifies the chosen payment reference the user wants to use to pay for this session.
+   This field is of type string.
 
 Response fields
 """""""""""""""
 
 success
    Whether or not the call was a success (of type boolean)
+is-stoppable
+   Indicates whether the session can be stopped via "session-stop" API call
+session-id
+   Optionally returned when a session can be stopped
 
 Status codes
 """"""""""""
@@ -44,21 +51,21 @@ Examples
 Request::
 
     {
-        "session-stop": {
-            "user": {
-                "identifier-type": "username",
-                "identifier": "youridentifier",
-                "token": "87d4e3085af04671834ebeb127df33bf"
-            },
-            "connector-id": "1356",
-            "session-id": "dfdf"
-        }
+       "session-start": {
+           "user": {
+               "identifier-type": "username",
+               "identifier": "youridentifier",
+               "token": "87d4e3085af04671834ebeb127df33bf"
+           },
+           "connector-id": "1356",
+           "payment-reference": "1212"
+       }
     }
 
 Response::
 
     {
-        "session-stop": {
+        "session-start": {
             "success": true
         }
     }
