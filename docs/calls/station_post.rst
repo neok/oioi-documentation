@@ -51,7 +51,7 @@ station
         country
             string, mandatory
 
-            Format: international two letter codes (``ISO 3166-1 alpha-2``).
+            Format: international two-letter codes in accordance with `ISO 639-1:2002`_.
 
     contact
         object, mandatory
@@ -292,3 +292,5 @@ Response ::
             "success": true
         }
     }
+
+.. _iso 639-1:2002: https://en.wikipedia.org/wiki/ISO_639-1
