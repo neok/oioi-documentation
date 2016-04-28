@@ -1,12 +1,15 @@
 .. highlight:: js
 
-Request/Response
-================
+Session Stop
+============
+
+Request
+-------
 
 ``"session-stop"`` identifies the call as a session-stop call.
 
-Request fields
---------------
+Fields
+~~~~~~
 
 user
    This field identifies the customer.
@@ -24,14 +27,17 @@ connector-id
 session-id
    A unique ID that identifies this session. Can be any string.
 
-Response fields
----------------
+Response
+--------
+
+Fields
+~~~~~~
 
 success
    Whether or not the call was a success (of type boolean)
 
 Status codes
-------------
+~~~~~~~~~~~~
 
 200 OK
    Request was processed successfully

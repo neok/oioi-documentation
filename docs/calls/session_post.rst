@@ -1,12 +1,15 @@
 .. highlight:: js
 
-Request/Response
+Session Post
 ================
+
+Request
+-------
 
 ``"session-post"`` identifies the call as a session-post call.
 
-Request fields
---------------
+Fields
+~~~~~~
 
 user
     This field identifies the customer who charged. The identifier is something that uniquely identifies the customer, depending on the identifier-type. The identifier field is of type string.
@@ -33,16 +36,18 @@ partner-identifier
     The partner identifier of the partner that shall be associated with this CDR.
     See also :ref:`partner identifier <glossary-partner-identifier>`
 
-Response fields
----------------
+Response
+--------
+Fields
+~~~~~~
 
 success
     Whether or not the call was a success (of type boolean).
 reason
     If ``success`` was ``false``, ``reason`` explains what the problem was. This field is of type string. Will be ``null`` on success.
 
-Example
--------
+Examples
+--------
 
 Request::
 
