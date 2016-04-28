@@ -1,5 +1,7 @@
 .. highlight:: js
 
+.. _calls-connectorpoststatus-docs:
+
 Connector Post Status
 =====================
 

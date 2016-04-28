@@ -24,10 +24,7 @@ When the status of a connector changes, PlugSurfing expects the CPO to send
 a ``connector-post-status`` request.
 The update will be immediately visible to all customers.
 
-.. toctree::
-   :maxdepth: 2
-
-   ../calls/station_post
+Implementation: :ref:`calls-stationpost-docs`
 
 .. _cpo-poi-dynamic-docs:
 
@@ -37,7 +34,4 @@ When the status of a connector changes, PlugSurfing expects the CPO to send
 a ``connector-post-status`` request.
 The update will be immediately visible to all customers.
 
-.. toctree::
-   :maxdepth: 2
-
-   ../calls/connector_post_status
+Implementation: :ref:`calls-connectorpoststatus-docs`

@@ -1,5 +1,7 @@
 .. highlight:: js
 
+.. _calls-sessionstart-docs:
+
 Session Start
 =============
 

@@ -1,5 +1,7 @@
 .. highlight:: js
 
+.. _calls-stationpost-docs:
+
 Station Post
 ============
 

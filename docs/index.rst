@@ -6,6 +6,7 @@ The main documentation for the OIOI is organized into a couple of sections:
 * :ref:`introduction-docs`
 * :ref:`cpo-docs`
 * :ref:`emp-docs`
+* :ref:`calls-docs`
 
 .. _introduction-docs:
 
@@ -41,5 +42,14 @@ The main documentation for the OIOI is organized into a couple of sections:
    emp/cdr
    emp/remote_start
    emp/rfid_start
+
+.. _calls-docs:
+
+.. toctree::
+  :maxdepth: 1
+  :caption: HTTP Calls
+  :glob:
+
+  calls/*
 
 .. todolist::
