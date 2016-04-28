@@ -1,7 +1,7 @@
 .. highlight:: js
 
 Request/Response
-~~~~~~~~~~~~~~~~
+================
 
 ``"station-post"`` identifies the call as a station-post call.
 
@@ -10,7 +10,7 @@ Request/Response
 .. warning:: The station's connectors' IDs may not be changed once it is created.
 
 Request fields
-""""""""""""""
+--------------
 
 station
     An object that holds the station data. Fields of a station are:
@@ -195,13 +195,13 @@ partner-identifier
     See also :ref:`partner identifier <glossary-partner-identifier>`
 
 Response fields
-"""""""""""""""
+---------------
 
 success
     Whether or not the call was a success (of type boolean)
 
 Examples
-""""""""
+--------
 
 Request::
 

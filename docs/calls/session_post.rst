@@ -1,12 +1,12 @@
 .. highlight:: js
 
 Request/Response
-----------------
+================
 
 ``"session-post"`` identifies the call as a session-post call.
 
 Request fields
-~~~~~~~~~~~~~~
+--------------
 
 user
     This field identifies the customer who charged. The identifier is something that uniquely identifies the customer, depending on the identifier-type. The identifier field is of type string.
@@ -34,7 +34,7 @@ partner-identifier
     See also :ref:`partner identifier <glossary-partner-identifier>`
 
 Response fields
-~~~~~~~~~~~~~~~
+---------------
 
 success
     Whether or not the call was a success (of type boolean).
@@ -42,7 +42,7 @@ reason
     If ``success`` was ``false``, ``reason`` explains what the problem was. This field is of type string. Will be ``null`` on success.
 
 Example
-~~~~~~~
+-------
 
 Request::
 

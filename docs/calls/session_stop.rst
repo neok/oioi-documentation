@@ -1,12 +1,12 @@
 .. highlight:: js
 
 Request/Response
-~~~~~~~~~~~~~~~~
+================
 
 ``"session-stop"`` identifies the call as a session-stop call.
 
 Request fields
-""""""""""""""
+--------------
 
 user
    This field identifies the customer.
@@ -25,13 +25,13 @@ session-id
    A unique ID that identifies this session. Can be any string.
 
 Response fields
-"""""""""""""""
+---------------
 
 success
    Whether or not the call was a success (of type boolean)
 
 Status codes
-""""""""""""
+------------
 
 200 OK
    Request was processed successfully
@@ -41,7 +41,7 @@ Status codes
    A connector could not be found by the supplied identifier
 
 Examples
-""""""""
+--------
 
 Request::
 

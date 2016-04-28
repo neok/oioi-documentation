@@ -1,12 +1,12 @@
 .. highlight:: js
 
 Request/Response
-~~~~~~~~~~~~~~~~
+================
 
 ``"session-start"`` identifies the call as a session-start call.
 
 Request fields
-""""""""""""""
+--------------
 
 user
    This field identifies the customer.
@@ -26,7 +26,7 @@ payment-reference (optional)
    This field is of type string.
 
 Response fields
-"""""""""""""""
+---------------
 
 success
    Whether or not the call was a success (of type boolean)
@@ -36,7 +36,7 @@ session-id
    Optionally returned when a session can be stopped
 
 Status codes
-""""""""""""
+------------
 
 200 OK
    Request was processed successfully
@@ -46,7 +46,7 @@ Status codes
    A connector could not be found by the supplied identifier
 
 Examples
-""""""""
+--------
 
 Request::
 

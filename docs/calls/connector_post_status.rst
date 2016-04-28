@@ -1,12 +1,12 @@
 .. highlight:: js
 
 Request/Response
-~~~~~~~~~~~~~~~~
+================
 
 ``"connector-post-status"`` identifies the call as a status update call.
 
 Request fields
-""""""""""""""
+--------------
 
 connector-id
     The EVSE ID of the conncetor.
@@ -25,13 +25,13 @@ partner-identifier
     See also :ref:`partner identifier <glossary-partner-identifier>`
 
 Response fields
-"""""""""""""""
+---------------
 
 success
     Whether or not the call was a success (of type boolean)
 
 Status codes
-""""""""""""
+------------
 
 200
     All went well
@@ -41,7 +41,7 @@ Status codes
     The connector could not be identified uniquely
 
 Examples
-""""""""
+--------
 
 Request::
 
