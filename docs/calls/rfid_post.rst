@@ -16,7 +16,7 @@ Fields
 rfids
     An array of strings. Each string represents one UID.
 partner-identifier
-    The partner identifier of the partner that shall be associated with this CDR.
+    The partner identifier of the partner that shall be associated with these UIDs (string).
     See also :ref:`partner identifier <glossary-partner-identifier>`
 
 Response

@@ -14,7 +14,7 @@ Fields
 ~~~~~~
 
 connector-id
-    The EVSE ID of the conncetor.
+    The EVSE ID of the conncetor (string).
     See also :ref:`EVSE <glossary-evse>`.
 status
     One of the following strings:
@@ -26,7 +26,7 @@ status
     * ``"Unknown"``
 
 partner-identifier
-    The partner identifier of the partner that owns the connector.
+    The partner identifier of the partner that owns the connector (string).
     See also :ref:`partner identifier <glossary-partner-identifier>`
 
 Response
@@ -36,7 +36,7 @@ Fields
 ~~~~~~
 
 success
-    Whether or not the call was a success (of type boolean)
+    Whether or not the call was a success (boolean)
 
 Status codes
 ~~~~~~~~~~~~

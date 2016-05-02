@@ -21,72 +21,58 @@ station
     An object that holds the station data. Fields of a station are:
 
     id
-        string, mandatory
-
-        An identifier that uniquely identifies the station in your system.
+        An identifier that uniquely identifies the station in your system (string).
     name
-        string, mandatory
-
-        The name is shown to the EV driver.
-    description
-        string, optional
-
-        A more detailed description of the station.
+        The name is shown to the EV driver (string).
+    description (optional)
+        A more detailed description of the station (string).
     latitude
-        float, mandatory
+        Latitude of the station (float).
     longitude
-        float, mandatory
+        Longitude of the station (float).
     address
-        object, mandatory
-        The address helps EV drivers locate the station.
+        The address helps EV drivers locate the station (object).
 
         street
-            string, mandatory
+            string
         street-number
-            string, mandatory
+            string
         city
-            string, mandatory
+            string
         zip
-            string, mandatory
+            string
         country
-            string, mandatory
+            string
 
             Format: international two-letter codes in accordance with `ISO 639-1:2002`_.
 
     contact
-        object, mandatory
+        object
 
         phone
-            string, mandatory
-        fax
-            string, optional
-        website
-            string, optional
-        email
-            string, optional
+            string
+        fax (optional)
+            string
+        website (optional)
+            string
+        email (optional)
+            string
 
     cpo-id
-        string, mandatory
-
-        The EVSE identifier, e.g. ``+49*8PS``, of the CPO of the charging station.
+        The EVSE identifier, e.g. ``+49*8PS``, of the CPO of the charging station (string).
     is-open-24
-        boolean, mandatory
-
-        Whether or not the station is always accessible (24 hours per day).
+        Whether or not the station is always accessible (24 hours per day) (boolean).
     connectors
-        array of objects, mandatory
+        array of objects
 
         All the connectors belonging to this station:
 
             id
-                string, mandatory
-
-                The EVSE ID of the conncetor.
+                The EVSE ID of the conncetor (string).
                 See also :ref:`EVSE <glossary-evse>`.
             name
-                string, mandatory
+                The name of the type of connector (string).
 
-                The name of the type of connector.
                 Allowed types are:
 
                 * ``"Type2"``
@@ -110,23 +96,16 @@ station
 
                 If your type is missing, please do not hesitate to contact PlugSurfing.
             speed
-                float, mandatory
+                Speed in kW (float).
 
-                Speed in kilowatts (e.g. ``3.7``).
-
-    open-hour-notes
-        array of objects, optional
-
+    open-hour-notes (optional)
         An array of objects containing certain opening periods:
 
             times
-                string, mandatory
-
-                An array of two strings. Opening and closing time.
+                Opening and closing time (array of strings).
             days
-                array of two strings, mandatory
+                Weekdays when the interval starts and ends (array of two strings).
 
-                Weekdays when the interval starts and ends.
                 Both are the same if it is for one specific day only.
 
             Example::
@@ -160,40 +139,29 @@ station
             For the interval Monday to Friday, the station is open from 07:30 to 19:00.
             On Saturday, the station is open from 09:00 to 15:00.
 
-    notes
-        string, optional
+    notes (optional)
+        Additional notes, for example how to find the station (string).
+    is-reservable (optional)
+        boolean
+    floor-level (optional)
+        On which floor the station is located, for example in a parking house (integer).
+    is-free-charge (optional)
+        Whether charging can be done without cost (boolean).
+    total-parking (optional)
+        The number of parking spots that are available at the station (integer).
+    is-green-power-available (optional)
+        boolean
+    is-plugin-charge (optional)
+        boolean
+    is-roofed (optional)
+        boolean
+    is-private (optional)
+        Whether the station is privately owned (boolean).
 
-        Additional notes, for example how to find the station.
-    is-reservable
-        boolean, optional
-    floor-level
-        integer, optional
-
-        On which floor the station is located, for example in a parking house.
-    is-free-charge
-        boolean, optional
-
-        Whether charging can be done without cost.
-    total-parking
-        integer, optional
-
-        The number of parking spots that are available at the station.
-    is-green-power-available
-        boolean, optional
-    is-plugin-charge
-        boolean, optional
-    is-roofed
-        boolean, optional
-    is-private
-        boolean, optional
-
-        Whether the station is privately owned.
         This has multiple implications and the station won't show up everywhere on the PlugSurfing platforms.
         For details, please contact PlugSurfing.
     deleted
-        boolean, optional
-
-        Soft delete the station and its related connectors
+        Soft delete the station and its related connectors (boolean).
 
 partner-identifier
     The partner identifier of the partner that shall be associated with this station.

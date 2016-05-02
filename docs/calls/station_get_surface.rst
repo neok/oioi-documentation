@@ -19,13 +19,13 @@ Fields
 ~~~~~~
 
 min-lat
-    Minimum latitude of the area you are querying.
+    Minimum latitude of the area you are querying (float).
 max-lat
-    Maximum latitude of the area you are querying.
+    Maximum latitude of the area you are querying (float).
 min-long
-    Minimum longitude of the area you are querying.
+    Minimum longitude of the area you are querying (float).
 max-long
-    Maximum longitude of the area you are querying.
+    Maximum longitude of the area you are querying (float).
 filters
     An object to filter the response (object).
 

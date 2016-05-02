@@ -14,16 +14,25 @@ Fields
 ~~~~~~
 
 user
-   This field identifies the customer.
-   The identifier is something that uniquely identifies the customer, depending on the identifier-type.
-   The identifier field is of type string.
-   The identifier-type can be one of:
+    This field identifies the customer (object).
 
-   * ``"evco-id"``
-   * ``"rfid"``
-   * ``"username"``
+    identifier-type
+        How to identify the user (string).
 
-   The token field is an optional field of type string and can be used to authenticate the user.
+        The identifier-type can be one of:
+
+        * ``"evco-id"``
+        * ``"rfid"``
+        * ``"username"``
+
+    identifier
+        The identifier is something that uniquely identifies the customer,
+        depending on the identifier-type (string).
+    token (optional)
+        A token can be used to authenticate the user (string).
+
+        For example: if the identifier type is username and the identifier is the user's username,
+        then token is used for authentication instead of a password.
 
 Response
 --------
@@ -32,10 +41,10 @@ Fields
 ~~~~~~
 
 vehicles
-    An array of all vehicles.
+    An array of objects.
 
     id
-        The internal DB id of the vehicle.
+        The internal DB ID of the vehicle (integer).
     brand
         The maker of the vehicle (string).
     model
@@ -44,6 +53,27 @@ vehicles
         The maximum charging speed of the vehicle in kW (float).
     connector-types
         An array of connector types the vehicle supports (strings).
+
+        Types are of:
+
+        * ``"Type2"``
+        * ``"Combo"``
+        * ``"Chademo"``
+        * ``"Schuko"``
+        * ``"Type3"``
+        * ``"CeeBlue"``
+        * ``"3PinSquare"``
+        * ``"Type1"``
+        * ``"CeeRed"``
+        * ``"Cee2Poles"``
+        * ``"Tesla"``
+        * ``"Scame"``
+        * ``"Nema5"``
+        * ``"CeePlus"``
+        * ``"T13"``
+        * ``"T15"``
+        * ``"T23"``
+        * ``"Marechal"``
 
 Status codes
 ~~~~~~~~~~~~

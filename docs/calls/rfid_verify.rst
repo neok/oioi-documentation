@@ -14,7 +14,7 @@ Fields
 ~~~~~~
 
 rfid
-    The UID to verify (String).
+    The UID to verify (string).
 
 Response
 --------

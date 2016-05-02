@@ -14,20 +14,29 @@ Fields
 ~~~~~~
 
 user
-   This field identifies the customer.
-   The identifier is something that uniquely identifies the customer, depending on the identifier-type.
-   The identifier field is of type string.
-   The identifier-type can be one of:
+    This field identifies the customer (object).
 
-   * ``"evco-id"``
-   * ``"rfid"``
-   * ``"username"``
+    identifier-type
+        How to identify the user (string).
 
-   The token field is an optional field of type string and can be used to authenticate the user.
+        The identifier-type can be one of:
+
+        * ``"evco-id"``
+        * ``"rfid"``
+        * ``"username"``
+
+    identifier
+        The identifier is something that uniquely identifies the customer,
+        depending on the identifier-type (string).
+    token (optional)
+        A token can be used to authenticate the user (string).
+
+        For example: if the identifier type is username and the identifier is the user's username,
+        then token is used for authentication instead of a password.
 connector-id
-   The EVSE ID that identifies the connector where the session should be stopped.
+   The EVSE ID that identifies the connector where the session should be stopped (string).
 session-id
-   A unique ID that identifies this session. Can be any string.
+   A unique ID that identifies this session (string).
 
 Response
 --------
@@ -36,7 +45,7 @@ Fields
 ~~~~~~
 
 success
-   Whether or not the call was a success (of type boolean)
+   Whether or not the call was a success (boolean).
 
 Status codes
 ~~~~~~~~~~~~

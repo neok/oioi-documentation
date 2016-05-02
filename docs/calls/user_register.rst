@@ -33,6 +33,7 @@ registered
     ``true``, if the registration was a success, ``false`` otherwise (boolean).
 token
     A token to authenticate the user in future requests (string).
+    
     Keep this token.
     When you make future requests where the user needs to be authenticated,
     you supply this token with the request.

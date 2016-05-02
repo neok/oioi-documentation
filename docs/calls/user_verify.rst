@@ -19,10 +19,12 @@ password
     The plain password or token of the user (string).
 is-token
     Defines whether the supplied password is actually a token (boolean).
+
     If ``is-token`` is ``true``, the password is interpreted as a token of the user.
     Otherwise, the password is interpreted as the plain password of the user.
 language
     The locale of the user (string).
+
     Expected is a lowercase, two-character string in accordance with `ISO 639-1:2002`_.
 
 Response
@@ -35,6 +37,7 @@ verified
     ``true``, if the verification was a success, ``false`` otherwise (boolean).
 token
     A token to authenticate the user in future requests (string).
+    
     Keep this token.
     When you make future requests where the user needs to be authenticated,
     you supply this token with the request.
