@@ -46,8 +46,8 @@ Remote Start/Stop
 
 API Key
     In order to have access to the PlugSurfing API you need to be in possession of an API key.
-    You supply that key with every request and we verify that you have access to the requested resource.
+    You supply that key with every request and PlugSurfing verifies that you have access to the requested resource.
 
 .. warning:: Never give your API key to anyone!
              PlugSurfing will never ask you for your API key!
-             We might cancel your access if your key is associated with malicious behaviour.
+             PlugSurfing may cancel your access if your key is associated with malicious behaviour.

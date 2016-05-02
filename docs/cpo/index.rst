@@ -1,6 +1,5 @@
 Introduction for CPOs
 =====================
-
 In order for a CPO to connect to PlugSurfing and make their charging stations
 available in the PlugSurfing network, few steps need to be taken:
 
@@ -8,3 +7,6 @@ available in the PlugSurfing network, few steps need to be taken:
 * :ref:`cpo-cdr-docs`
 * :ref:`cpo-remote-start-docs`
 * :ref:`cpo-rfid-start-docs`
+
+.. warning:: If sessions in your network are stoppable, please inform PlugSurfing.
+             PlugSurfing needs to make sure that their services allow for stopping accordingly.

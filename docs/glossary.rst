@@ -109,7 +109,7 @@ Partner Identifier
     This is different from an API key!
     The partner chooses the identifier and gives it to PlugSurfing in a secure manner.
     Must be unique and hard to guess.
-    We remomend a random string that is at least 16 characters long.
+    PlugSurfing remomends a random string that is at least 16 characters long.
 
     A company with one API key can use multiple partner-identifiers,
     for example to make API calls for another company.
