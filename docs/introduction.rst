@@ -41,13 +41,18 @@ Client Exchange
     The identifiers are made out of a contract ID (:ref:`EVCO ID <glossary-evco-id>`) and the unique UID of the charging key.
 
 Remote Start/Stop
-    In order to start or stop a charging session from the app,
+    In order to start or stop a charging session from an app,
     PlugSurfing's partner implements the remote start/stop functionality of the OIOI.
 
 API Key
     In order to have access to the PlugSurfing API you need to be in possession of an API key.
     You supply that key with every request and PlugSurfing verifies that you have access to the requested resource.
 
+.. note:: If you want to get an API key to connect to PlugSurfing,
+          please contact the `PlugSurfing Service`_.
+
 .. warning:: Never give your API key to anyone!
              PlugSurfing will never ask you for your API key!
              PlugSurfing may cancel your access if your key is associated with malicious behaviour.
+
+.. _plugsurfing service: mailto:service@plugsurfing.com
