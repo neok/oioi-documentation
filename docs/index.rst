@@ -1,6 +1,8 @@
 Welcome to OIOI's documentation!
 ================================
 
+.. image:: images/ps-oioi-logo-small.png
+
 The main documentation for the OIOI is organized into a couple of sections:
 
 * :ref:`introduction-docs`
