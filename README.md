@@ -1,3 +1,4 @@
+![OIOI Logo](https://www.plugsurfing.com/assets/img/icons/ps-oioi-logo-small.png)
 # OIOI Documentation
 Documentation for the OIOI interface to connect to the PlugSurfing service
 
