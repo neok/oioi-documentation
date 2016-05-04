@@ -3,8 +3,11 @@ Welcome to OIOI's documentation!
 
 .. image:: images/ps-oioi-logo-small.png
 
-This is the stable version of the OIOI, **version 3.**
-For other versions, open the menu on the very bottom left of the screen.
+.. warning:: This is the latest version of the OIOI, **version 4.**
+             The latest version is still under development and not stable.
+
+             For other versions, e.g. **stable**,
+             open the menu on the very bottom left of the screen.
 
 The main documentation for the OIOI is organized into a couple of sections:
 
