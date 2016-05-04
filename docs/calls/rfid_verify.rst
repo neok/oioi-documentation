@@ -5,6 +5,13 @@
 RFID Verify
 ===========
 
+.. note:: UIDs are read from left to right using big-endian format.
+
+.. note:: Valid lengths of UIDs are 8, 14, and 20 characters.
+          If you have shorter UIDs, you need to zero-pad them on the left.
+
+.. note:: UIDs need to be all upper case.
+
 Request
 -------
 
