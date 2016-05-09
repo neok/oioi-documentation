@@ -5,16 +5,16 @@ Receiving Remote Starts
 
 Starting a Session
 ------------------
-Whenever PlugSurfing wants to start a session in your network,
-PlugSurfing will send a ``session-start`` request.
-PlugSurfing will analyze the CPO's response and display an appropriate
+Whenever an EV driver wants to start a session in your network,
+the EMP will send a ``session-start`` request.
+The EMP will analyze the CPO's response and must display an appropriate
 message to the user.
 
 Implementation: :ref:`calls-sessionstart-docs`
 
 Stopping a Session
 ------------------
-Whenever a user wants to stop a running session,
-PlugSurfing will send a ``session-stop`` request.
+Whenever an EV driver wants to stop a running session,
+the EMP will send a ``session-stop`` request.
 
 Implementation: :ref:`calls-sessionstop-docs`

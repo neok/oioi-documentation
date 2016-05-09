@@ -88,7 +88,7 @@ stations
     An array of charging stations (objects).
 
     id
-        PlugSurfing's ID of the station (integer).
+        The reponder's ID of the station (integer).
 
         Use this ID in the excludes filter (see request) or to get more details.
         See also :ref:`calls-stationgetbyids-docs`.

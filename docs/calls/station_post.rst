@@ -158,8 +158,8 @@ station
     is-private (optional)
         Whether the station is privately owned (boolean).
 
-        This has multiple implications and the station won't show up everywhere on the PlugSurfing platforms.
-        For details, please contact PlugSurfing.
+        This has multiple implications depending on the connected partner and the station won't show up everywhere on their platforms.
+        For details, please contact the connected partner.
     deleted
         Soft delete the station and its related connectors (boolean).
 

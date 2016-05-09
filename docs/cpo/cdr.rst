@@ -3,7 +3,7 @@
 Sending CDRs
 ============
 CDRs are the basis of all billing and clearing.
-A CDR contains all required information about a finished session,
+A CDR contains all required information about a session,
 e.g. the customer or the consumed energy.
 
 .. note:: You can also use this method to send information about sessions that just started or are still ongoing.

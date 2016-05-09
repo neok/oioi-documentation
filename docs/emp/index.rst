@@ -1,8 +1,8 @@
 Introduction for EMPs
 =====================
 
-In order for an EMP to connect to PlugSurfing and make our charging stations
-available in their network, few steps need to be taken:
+In order for an EMP to connect to a CPO and make their charging stations
+available in the EMP's network, the following steps need to be taken:
 
 * :ref:`emp-user-docs`
 * :ref:`emp-poi-docs`

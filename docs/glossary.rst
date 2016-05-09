@@ -5,7 +5,6 @@ Glossary
 
 EV
     Electric Vehicle.
-    A car that is powered by an electric engine rather than an internal combustion engine.
 
     `Wikipedia EV`_
 
@@ -21,6 +20,7 @@ Charging Station
 
 POI
     Point of Interest.
+    POI refers to the whereabouts and attributes of a charging station, including latitude, longitude, plug type, and charging speed.
     Throughout this documentation, the terms :ref:`charging stations <glossary-charging-station>` and POI are used interchangeably.
 
 .. _glossary-evse:
@@ -31,7 +31,7 @@ EVSE
     Usually, one EVSE ID uniquely identifies one connector.
 
     There are cases where one EVSE ID identifies multiple connectors.
-    In that case, all connectors with the same EVSE ID always share the same status (e.g. `Available` or `Occupied`).
+    In that case, all connectors with the same EVSE ID always share the same status (e.g. ``Available`` or ``Occupied``).
     That also means that only one connector of all the connectors sharing the same EVSE ID can be in use at any one point in time.
 
     Example: ``DE*123*E12345*A``
@@ -52,20 +52,20 @@ EVSE
 
 CPO
     Charge Point Operator.
-    To access a :ref:`charging station <glossary-charging-station>` via an API, usually our server connects to the CPO's server.
+    The CPO manages, operates, and maintains charging station infrastructure.
 
 .. _glossary-emp:
 
 EMP
     E-Mobility Provider.
     Companies that provide :ref:`EV <glossary-ev>` drivers with access to charging stations.
-    PlugSurfing is an EMP.
+    PlugSurfing, as interface between electric car drivers and CPOs, is an EMP.
 
 .. _glossary-evco-id:
 
 EVCO ID
-    ID of a customer of an :ref:`EMP <glossary-emp>`.
-    Uniquely identifies the customer across EMPs.
+    Contract ID of :ref:`EMP <glossary-emp>` and :ref:`EV <glossary-ev>` driver.
+    Uniquely identifies the customer across all networks.
 
     An EVCO ID must be valid with respect to the following structure:
 
@@ -83,43 +83,45 @@ EVCO ID
 CDR
     Charge Detail Record.
     After a customer finished charging at a :ref:`charging station <glossary-charging-station>`,
-    the :ref:`CPO <glossary-cpo>` provides us with the CDR for that session.
+    the :ref:`CPO <glossary-cpo>` provides the EMP with the CDR for that session.
     Includes data like:
 
     * Session start date/time
     * Session end date/time
     * Consumed energy
+    * EVCO ID or UID
 
 .. note:: A CDR may be sent by a CPO before the session finished.
           For example to inform the EMP of a started session.
 
 .. _glossary-charging-key:
 
-Charging Key
-    The charging key is an RFID token that authenticates an :ref:`EV <glossary-ev>` driver at a :ref:`charging station <glossary-charging-station>`.
+RFID
+    An RFID token that authenticates an :ref:`EV <glossary-ev>` driver at a :ref:`charging station <glossary-charging-station>`.
+    Common RFID carriers are cards (credit card format) and key hangers.
 
 .. _glossary-static-data:
 
 Static data
-    Data that doesn't change frequently.
+    Data on the charging station that doesn't change frequently.
     Charging station location, address, connector type, etc.
 
 .. _glossary-dynamic-data:
 
 Dynamic data
-    Data that may change frequently.
-    Statuses of connectors.
+    Data that may change frequently,
+    like the status of a connector.
 
 .. _glossary-partner-identifier:
 
 Partner Identifier
     A universally unique identifier that identifies the partner who issues an API call.
     This is different from an API key!
-    The partner chooses the identifier and gives it to PlugSurfing in a secure manner.
+    The sending partner chooses the identifier and provides it to the receiving partner in a secure manner.
     Must be unique and hard to guess.
-    PlugSurfing remomends a random string that is at least 16 characters long.
+    Must be a random string that is at least 16 characters long.
 
-    A company with one API key can use multiple partner-identifiers,
+    A company with one API key can use multiple partner identifiers,
     for example to make API calls for another company.
 
     At the same time, multiple API keys can use the same partner identifier to act
