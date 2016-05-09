@@ -4,12 +4,6 @@ Documentation for the OIOI interface to connect to the PlugSurfing service
 
 Please see http://docs.plugsurfing.com for a readable version.
 
-## Theme
-When cloning, use the `--recursive` flag.
-The theme is included as a git submodule.
-
-To update the theme, use `git submodule update --remote`.
-
 ## Building HTML
 Change into `docs` and run `make html`.
 Sphinx writes the resulting files into the `_build` directory.
@@ -18,5 +12,6 @@ Sphinx writes the resulting files into the `_build` directory.
 - python 2.7
 - Sphinx
 - sphinx-autobuild
+- readthedocs theme
 
-Run `pip install Sphinx sphinx-autobuild`, if you have pip installed.
+Run `pip install Sphinx sphinx-autobuild sphinx_rtd_theme`, if you have pip installed.
