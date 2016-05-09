@@ -21,26 +21,30 @@ Charging Station
 
 POI
     Point of Interest.
-    Throughout this documentation, :ref:`charging stations <glossary-charging-station>` are referred to as POI.
+    Throughout this documentation, the terms :ref:`charging stations <glossary-charging-station>` and POI are used interchangeably.
 
 .. _glossary-evse:
 
 EVSE
     Electric Vehicle Supply Equipment.
-    A :ref:`charging station <glossary-charging-station>` may have one or more EVSE IDs
-    Usually, one EVSE ID uniquely identifies one connector
+    A :ref:`charging station <glossary-charging-station>` may have one or more EVSE IDs.
+    Usually, one EVSE ID uniquely identifies one connector.
 
     There are cases where one EVSE ID identifies multiple connectors.
-    In that case, all connectors always share the same status (e.g. `Available` or `Occupied`).
+    In that case, all connectors with the same EVSE ID always share the same status (e.g. `Available` or `Occupied`).
     That also means that only one connector of all the connectors sharing the same EVSE ID can be in use at any one point in time.
 
-    Example: ``+49*123*E123456``
-    General structure (*may* be separated by asterisks):
+    Example: ``DE*123*E12345*A``
 
-    * Country Code
-    * CPO identifier (PlugSurfing's is usually ``8PS``, in the Netherlands ``PLU``)
-    * literal ``E``
-    * ID of the EVSE
+    An EVSE ID must be valid with respect to the following structure:
+
+    * ``[A-Za-z]{2}\*?[A-Za-z0-9]{3}\*?E[A-Za-z0-9\*]{1,30}``
+    * Country Code (international two-letter code in accordance with `ISO 3166-1 alpha-2`_)
+    * The literal ``*`` (optional)
+    * CPO identifier (letters and numbers; three characters unquiely identifying the CPO of the EVSE)
+    * The literal ``*`` (optional)
+    * The literal ``E``
+    * ID of the EVSE (letters, numbers, and the literal ``*``; 1 - 30 characters)
 
     See also `Wikipedia Charging Station`_.
 
@@ -62,13 +66,17 @@ EMP
 EVCO ID
     ID of a customer of an :ref:`EMP <glossary-emp>`.
     Uniquely identifies the customer across EMPs.
-    A PlugSurfing customer could have an EVCO ID like ``+49*8PS*123456*7``, although there are different formats.
-    General structure (*may* be separated by asterisks):
 
-    * Country Code
-    * EMP identifier (PlugSurfing's is usually ``8PS``, in the Netherlands ``PLU``)
-    * ID of the customer
-    * Check digit
+    An EVCO ID must be valid with respect to the following structure:
+
+    * ``[A-Za-z]{2}[\*|-]?[A-Za-z0-9]{3}[\*|-]?[A-Za-z0-9]{6}[\*|-]?[\d|X]``
+    * Country Code (international two-letter code in accordance with `ISO 3166-1 alpha-2`_)
+    * The literal ``*`` **or** the literal ``-`` (optional)
+    * EMP identifier (letters and numbers; three characters unquiely identifying the EMP of the EVCO)
+    * The literal ``*`` **or** the literal ``-`` (optional)
+    * ID of the EVCO (letters and numbers; six characters)
+    * The literal ``*`` **or** the literal ``-`` (optional)
+    * Check digit (A number or the literal ``X``)
 
 .. _glossary-cdr:
 
@@ -93,7 +101,7 @@ Charging Key
 .. _glossary-static-data:
 
 Static data
-    Data that doesn't change frequently
+    Data that doesn't change frequently.
     Charging station location, address, connector type, etc.
 
 .. _glossary-dynamic-data:
@@ -119,3 +127,4 @@ Partner Identifier
 
 .. _wikipedia ev:  https://en.wikipedia.org/wiki/Electric_vehicle
 .. _wikipedia charging station: https://en.wikipedia.org/wiki/Charging_station
+.. _iso 3166-1 alpha-2: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
