@@ -39,7 +39,7 @@ Status code
     Request was processed successfully
 404 Not found
     An active RFID with the given UID could not be found.
-    However, it is possible that the RFID is known by PlugSurfing, but currently blocked.
+    However, it is possible that the RFID is known, but currently blocked.
 
 Examples
 --------

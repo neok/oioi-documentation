@@ -2,8 +2,8 @@
 
 Sending POI Data
 ================
-In order for PlugSurfing to enable its users to charge in your network,
-PlugSurfing has to to know about your charging stations.
+In order to add your stations to the network,
+The EMP has to to know about your charging station locations and attributes.
 
 POI is split into two sections:
 
@@ -14,23 +14,22 @@ Static data is data that does not change very often,
 including for example the address and latitude/longitude of a station.
 
 Dynamic data is the name for the statuses of the connectors.
-This will show the user whether a connector is currently available or not.
+This will show the EV driver whether a connector is currently available or not.
 
 .. _cpo-poi-static-docs:
 
 Sending Static Data
 -------------------
-PlugSurfing expects the CPO to send all stations via OIOI.
+The CPO must send all stations via OIOI.
 In the beginning, there will be a one-time push of all existing charging stations.
-From then on, only new stations will be pushed.
-In some rare occasions, deletions and updates may also be pushed.
+From then on, only new stations and station deletions will be pushed.
 
 It is possible that a connected CPO will send stations from multiple CPOs.
-It is also possible, that PlugSurfing already has some of those CPOs listed in their database.
-PlugSurfing needs to be able to associate the pushed stations' CPOs with existing CPOs in the database.
-Before the CPO pushes their first station, they need to inform PlugSurfing about their internal identifiers for all given CPOs.
+It is also possible that the EMP already has some of those CPOs listed in their database.
+Therefore, the EMP needs to be able to associate the pushed stations' CPOs with existing CPOs in the database.
+Before the CPO pushes their first station, they need to inform the EMP about their internal identifiers for all given CPOs.
 Then, when the CPO pushes a station with a certain CPO identifier that may be unique to the CPO's system,
-PlugSurfing knows which CPO to pick from the database.
+the EMP knows which CPO to pick from their database.
 
 **Summary:** For a new CPO, pushing POI data is done in three steps:
 
@@ -44,9 +43,8 @@ Implementation: :ref:`calls-stationpost-docs`
 
 Sending Dynamic Data
 --------------------
-When the status of a connector changes, PlugSurfing expects the CPO to send
-a ``connector-post-status`` request to push the change.
-The update will be immediately visible to all customers.
+When the status of a connector changes,
+the CPO must send a ``connector-post-status`` request to push the change.
 
 .. note:: PlugSurfing only accepts dynamic data changes if they are associated to stations that were pushed by the same partner.
 

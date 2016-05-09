@@ -44,7 +44,7 @@ station
         country
             string
 
-            Format: international two-letter codes in accordance with `ISO 639-1:2002`_.
+            Format: international two-letter codes in accordance with `ISO 3166-1 alpha-2`_.
 
     contact
         object
@@ -158,8 +158,8 @@ station
     is-private (optional)
         Whether the station is privately owned (boolean).
 
-        This has multiple implications and the station won't show up everywhere on the PlugSurfing platforms.
-        For details, please contact PlugSurfing.
+        This has multiple implications depending on the connected partner and the station won't show up everywhere on their platforms.
+        For details, please contact the connected partner.
     deleted
         Soft delete the station and its related connectors (boolean).
 
@@ -261,4 +261,4 @@ Response ::
         }
     }
 
-.. _iso 639-1:2002: https://en.wikipedia.org/wiki/ISO_639-1
+.. _iso 3166-1 alpha-2: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2

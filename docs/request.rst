@@ -35,7 +35,7 @@ Response
 
 If the request was valid and successful,
 the response will contain the requested data or information about the success.
-Otherwise, the HTTP Response Code will not be 200 and more information about the error will be inside the response body.
+Otherwise, the HTTP response code will not be 200 and more information about the error will be inside the response body.
 
 Possible response codes and their meanings:
 
@@ -64,15 +64,15 @@ Possible response codes and their meanings:
 |          | You do not have access to this method and/or resource.                                                   |
 +----------+----------------------------------------------------------------------------------------------------------+
 | ``404``  | **Not Found.**                                                                                           |
-|          | One or more of the requested stations were not found.                                                    |
+|          | One or more of the requested entities were not found.                                                    |
 +----------+----------------------------------------------------------------------------------------------------------+
 | ``5xx``  | **Server Error.**                                                                                        |
 |          |                                                                                                          |
 |          | Errors in the ``500``-``599`` range (such as ``500`` or ``503``)                                         |
-|          | indicate that there was an internal error in the PlugSurfing server while trying to process the request, |
+|          | indicate that there was an internal error in the server while trying to process the request,             |
 |          | or that the server is temporarily unavailable (for example, because of timeouts).                        |
 |          |                                                                                                          |
 |          | You must retry later, honoring any Retry-After header included in the response.                          |
 |          |                                                                                                          |
-|          | Your servers must implement exponential back-off.                                                        |
+|          | Your services must implement exponential back-off.                                                       |
 +----------+----------------------------------------------------------------------------------------------------------+

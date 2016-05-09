@@ -2,16 +2,16 @@
 
 Receiving POIs
 ==============
-As an EMP, you can connect to PlugSurfing to display our POI data.
+As an EMP, you can connect to a CPO to display their POI data and allow your customers to charge at the CPO's charging stations.
 For example to display charging stations on an app's map.
 
-.. note:: For EMPs, PlugSurfing does not offer a full download of all available data.
+.. note:: For EMPs, OIOI does not offer a full download of all available data.
           Please use the provided methods to display geographically limited data to your users.
 
 .. note:: The total number of stations returned per request is limited,
           regardless of the geographical dimensions.
 
-.. warning:: PlugSurfing may cancel your access if your API key is associated with malicious behaviour.
+.. warning:: A CPO may cancel your access if your API key is associated with malicious behaviour.
 
 .. _emp-poi-area-docs:
 

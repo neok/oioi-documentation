@@ -46,7 +46,7 @@ stations
     An array of stations (array of objects).
 
     id
-        PlugSurfing's ID of the station (integer).
+        The responser's ID of the station (integer).
 
         Use this ID to get more details.
         See also :ref:`calls-stationgetbyids-docs`.
