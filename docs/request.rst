@@ -1,5 +1,7 @@
 .. highlight:: none
 
+.. _request-docs:
+
 Sending a Message to OIOI
 =========================
 
