@@ -33,7 +33,7 @@ stations
     address (optional)
         street (optional)
             string
-        streetNumber (optional)
+        street-number (optional)
             string
         city (optional)
             string
