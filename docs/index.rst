@@ -6,6 +6,14 @@ Welcome to OIOI's documentation!
 This is the stable version of the OIOI, **version 3.**
 For other versions, open the menu on the very bottom left of the screen.
 
+.. warning:: Even though this version is marked as ``stable``,
+             new fields may be added to requests and responses.
+
+             Your service must still accept all responses.
+             You may ignore the additional fields or implement an update.
+
+             Requests will only get additional fields if they are optional.
+
 The main documentation for the OIOI is organized into a couple of sections:
 
 * :ref:`introduction-docs`
