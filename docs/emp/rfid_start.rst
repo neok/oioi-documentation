@@ -25,7 +25,8 @@ If an EMP authorizes the UID,
 the CPO can allow the session and subsequently send the correlating CDR to that EMP.
 See also :ref:`emp-cdr-docs`.
 
-Implementation: :ref:`calls-rfidverify-docs`
+* **Role:** Receiver
+* **Implementation:** :ref:`calls-rfidverify-docs`
 
 .. _emp-rfid-offline-docs:
 
@@ -38,4 +39,5 @@ It is then the CPO's responsibility to authorize any UID and send the subsequent
 if the UID was part of the last push of UIDs from that EMP to the CPO.
 See also :ref:`emp-cdr-docs`.
 
-Implementation: :ref:`calls-rfidpost-docs`
+* **Role:** Sender
+* **Implementation:** :ref:`calls-rfidpost-docs`

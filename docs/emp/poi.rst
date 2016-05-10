@@ -20,7 +20,8 @@ Displaying stations in an area
 To display basic data about stations on a map or in a list,
 you can get stations by providing a surface (via latitude/longitude).
 
-Implementation: :ref:`calls-stationgetsurface-docs`
+* **Role:** Sender
+* **Implementation:** :ref:`calls-stationgetsurface-docs`
 
 .. _emp-poi-details-docs:
 
@@ -29,4 +30,5 @@ Displaying details of a station
 If you want to display more detailed information,
 you can query for those by a station's ID.
 
-Implementation: :ref:`calls-stationgetbyids-docs`
+* **Role:** Sender
+* **Implementation:** :ref:`calls-stationgetbyids-docs`

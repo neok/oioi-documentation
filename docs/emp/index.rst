@@ -16,7 +16,8 @@ Additional HTTP Header
 ----------------------
 For basic info, see :ref:`Sending a Message to OIOI <request-docs>`.
 
-For EMPs, the HTTP request must contain an additional header::
+For EMPs that also want to let the other party manage their users,
+the HTTP request must contain an additional header::
 
     B2B-Customer: <your-company-name>
 

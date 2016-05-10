@@ -10,7 +10,8 @@ the EMP will send a ``session-start`` request.
 The EMP must analyze the CPO's response and must display an appropriate
 message to the user.
 
-Implementation: :ref:`calls-sessionstart-docs`
+* **Role:** Sender
+* **Implementation:** :ref:`calls-sessionstart-docs`
 
 Stopping a Session
 ------------------
@@ -21,4 +22,5 @@ Please note that in order for a session to be stoppable,
 the response to ``session-start`` must include ``"is-stoppable": true``.
 See also :ref:`calls-sessionstart-docs`.
 
-Implementation: :ref:`calls-sessionstop-docs`
+* **Role:** Sender
+* **Implementation:** :ref:`calls-sessionstop-docs`
