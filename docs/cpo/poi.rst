@@ -37,7 +37,8 @@ the EMP knows which CPO to pick from their database.
 2. Full load of all existing charging stations (push)
 3. Continuously sending updates for new and existing charging stations (push)
 
-Implementation: :ref:`calls-stationpost-docs`
+* **Role:** Sender
+* **Implementation:** :ref:`calls-stationpost-docs`
 
 .. _cpo-poi-dynamic-docs:
 
@@ -48,4 +49,5 @@ the CPO must send a ``connector-post-status`` request to push the change.
 
 .. note:: PlugSurfing only accepts dynamic data changes if they are associated to stations that were pushed by the same partner.
 
-Implementation: :ref:`calls-connectorpoststatus-docs`
+* **Role:** Sender
+* **Implementation:** :ref:`calls-connectorpoststatus-docs`

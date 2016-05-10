@@ -9,4 +9,5 @@ e.g. the customer or the consumed energy.
 .. note:: A CPO can also use this method to send information about sessions that just started or are still ongoing.
           To do this, the CPO omits optional data that is not available at the moment, e.g. the session interval's stop time.
 
-Implementation: :ref:`calls-sessionpost-docs`
+* **Role:** Receiver
+* **Implementation:** :ref:`calls-sessionpost-docs`
