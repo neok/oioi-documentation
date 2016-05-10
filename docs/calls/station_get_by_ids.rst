@@ -23,26 +23,214 @@ Response
 
 Fields
 ~~~~~~
-
+Optional fields may be omitted or have the value ``null``.
 
 stations
     An array of charging stations (objects).
 
-    operator-company-id
+    id
+        The responder's internal ID of the station (integer)
+    address (optional)
+        street (optional)
+            string
+        streetNumber (optional)
+            string
+        city (optional)
+            string
+        zip (optional)
+            string
+        country (optional)
+            string
+    contact (optional)
+        email (optional)
+            string
+        web (optional)
+            string
+        phone (optional)
+            string
+        fax (optional)
+            string
+    operator-company-id (optional)
         The CPO of the charging station.
 
         The charge point operator is the company responsible for the functioning of the station.
         Access to the station usually also goes through the CPO.
-    owner-company-id
+    floor-level (optional)
+        On which floor the station is located, for example in a parking house (integer).
+    is-free-charge
+        Whether charging can be done without cost (boolean).
+    last-static-change (optional)
+        string (format: ``"2016-05-09T04:08:06+02:00"``)
+    last-dynamic-change (optional)
+        string (format: ``"2016-05-09T04:08:06+02:00"``)
+    name
+        string
+    description (optional)
+        string
+    latitude
+        float
+    longitude
+        float
+    open-hour-notes (optional)
+        An array of objects containing certain opening periods:
+
+            times
+                Opening and closing time (array of strings).
+            days
+                Weekdays when the interval starts and ends (array of two strings).
+
+                Both are the same if it is for one specific day only.
+
+            Example::
+
+                {
+                    "open-hour-notes": [
+                        {
+                            "times": [
+                                "07:30",
+                                "19:00"
+                            ],
+                            "days": [
+                                "Mo",
+                                "Fr"
+                            ]
+                        },
+                        {
+                            "times": [
+                                "09:00",
+                                "15:00"
+                            ],
+                            "days": [
+                                "Sa",
+                                "Sa"
+                            ]
+                        }
+                    ]
+                }
+
+            This example means the following:
+            For the interval Monday to Friday, the station is open from 07:30 to 19:00.
+            On Saturday, the station is open from 09:00 to 15:00.
+    total-parking
+        The number of parking spots that are available at the station (integer).
+    notes (optional)
+        Additional notes, for example how to find the station (string).
+    is-green-power-available
+        boolean
+    is-plugin-charge
+        boolean
+    is-roofed
+        boolean
+    is-reservable
+        boolean
+    has-dynamic-info
+        boolean
+    is-open-24
+        boolean
+    dynamic-status-summary (optional)
+        Whether the station is currently available (string).
+
+        One of:
+
+        * ``"AVAILABLE"``
+        * ``"OCCUPIED"``
+        * ``"RESERVED"``
+        * ``"OFFLINE"``
+        * ``"UNKNOWN"``
+
+    is-validated
+        boolean
+    is-private
+        Whether the station is privately owned (boolean).
+
+        For details, please contact the connected partner.
+    owner-company-id (optional)
         The owner of the charging station.
 
         The owner is usually either the CPO or something like a restaurant or Ikea, owning the stations on their property.
-    service-providers
+    service-providers (optional)
         An array of all service providers of the charging station.
 
         A service provider is a company that grants access to a charging station.
         See :ref:`EMP <glossary-emp>`.
+    connectors (optional)
+        id
+            The responder's internal ID of the station (integer)
+        status (optional)
+            Whether the connector is currently available (string).
 
+            One of:
+
+            * ``"AVAILABLE"``
+            * ``"OCCUPIED"``
+            * ``"RESERVED"``
+            * ``"OFFLINE"``
+            * ``"UNKNOWN"``
+
+        last-change (optional)
+            string (format: ``"2016-05-09T04:08:06+02:00"``)
+        name (optional)
+            The type of connector (string).
+
+            One of:
+
+            * ``"UNKNOWN"``
+            * ``"Type1"``
+            * ``"Type2"``
+            * ``"Type3"``
+            * ``"Schuko"``
+            * ``"Combo"``
+            * ``"CeeBlue"``
+            * ``"CeeRed"``
+            * ``"Cee2Poles"``
+            * ``"CeePlus"``
+            * ``"3PinSquare"``
+            * ``"Chademo"``
+            * ``"Tesla"``
+            * ``"Scame"``
+            * ``"Nema5"``
+            * ``"T13"``
+            * ``"T15"``
+            * ``"T23"``
+            * ``"Marechal"``
+
+        speed (optional)
+            Max. available charging speed of the connector (string).
+        mode (optional)
+            string
+        external-id (optional)
+            If available, the EVSE ID of the conncetor (string).
+            See also :ref:`EVSE <glossary-evse>`.
+
+            If an EVSE ID is not available,
+            another ID provided by the CPO may be returned.
+        prices (optional)
+            Prices for charging at this connector (object).
+            The prices of a connector always override the prices of a station.
+
+            Connector prices may also be returned if they equal the station prices.
+
+            starting-fee
+                The fee of starting a session at this connector (string; format ``"1.23"``).
+            charging-per-hour
+                The fee of charging energy at this connector, per hour (string; format ``"1.23"``).
+            parking-per-hour
+                The fee of parking with a connection to this connector, per hour (string; format ``"1.23"``).
+            charging-per-kwh
+                The fee of charging energy at this connector, per kWh (string; format ``"1.23"``).
+            currency
+                The currency of the prices (string; format ``"EUR"``).
+    prices (optional)
+        starting-fee
+            The fee of starting a session at this station (string; format ``"1.23"``).
+        charging-per-hour
+            The fee of charging energy at this station, per hour (string; format ``"1.23"``).
+        parking-per-hour
+            The fee of parking with a connection to this station, per hour (string; format ``"1.23"``).
+        charging-per-kwh
+            The fee of charging energy at this station, per kWh (string; format ``"1.23"``).
+        currency
+            The currency of the prices (string; format ``"EUR"``).
 companies
     An array of companies.
 
@@ -172,16 +360,11 @@ Response::
                         "name": "Schuko",
                         "speed": "3.7kW",
                         "mode": "Mode1",
-                        "external-id": "+49*123*1234567"
+                        "external-id": "+49*123*1234567",
+                        "prices": null
                     }
                 ],
-                "prices": {
-                    "starting-fee": null,
-                    "charging-per-hour": null,
-                    "parking-per-hour": "4.50",
-                    "charging-per-kwh": null,
-                    "currency": "EUR"
-                }
+                "prices": null
             },
             {
                 "id": 1169,
@@ -237,7 +420,7 @@ Response::
                 "is-reservable": false,
                 "has-dynamic-info": false,
                 "is-open-24": false,
-                "dynamic-status-summary": null,
+                "dynamic-status-summary": "AVAILABLE",
                 "is-validated": true,
                 "is-private": false,
                 "owner-company-id": 28,
@@ -248,24 +431,40 @@ Response::
                 "connectors": [
                     {
                         "id": 11451,
-                        "status": "UNKNOWN",
+                        "status": "AVAILABLE",
                         "last-change": "2014-07-01T15:25:40+02:00",
-                        "name": "Type2",
-                        "speed": "22.2kW",
-                        "mode": "Mode3"
+                        "name": "Chademo",
+                        "speed": "52kW",
+                        "mode": "Mode4",
+                        "external-id": "DE*123*E00000002",
+                        "prices": {
+                            "starting-fee": "0.00",
+                            "charging-per-hour": "0.00",
+                            "parking-per-hour": "1.30",
+                            "charging-per-kwh": "0.17",
+                            "currency": "EUR"
+                        }
                     },
                     {
                         "id": 11452,
-                        "status": "UNKNOWN",
+                        "status": "OCCUPIED",
                         "last-change": "2014-07-01T15:25:40+02:00",
                         "name": "Type2",
                         "speed": "22.2kW",
-                        "mode": "Mode3"
+                        "mode": "Mode3",
+                        "external-id": "DE*123*E00000002",
+                        "prices": {
+                            "starting-fee": "0.00",
+                            "charging-per-hour": "0.00",
+                            "parking-per-hour": "1.10",
+                            "charging-per-kwh": "0.36",
+                            "currency": "EUR"
+                        }
                     }
                 ],
                 "prices": {
-                    "starting-fee": null,
-                    "charging-per-hour": null,
+                    "starting-fee": "0.00",
+                    "charging-per-hour": "0.00",
                     "parking-per-hour": "1.10",
                     "charging-per-kwh": "0.36",
                     "currency": "EUR"
@@ -329,7 +528,15 @@ Response::
                         "last-change": "2014-12-29T21:48:08+01:00",
                         "name": "Type2",
                         "speed": "22.2kW",
-                        "mode": "Mode3"
+                        "mode": "Mode3",
+                        "external-id": null,
+                        "prices": {
+                            "starting-fee": "0.00",
+                            "charging-per-hour": "0.00",
+                            "parking-per-hour": "1.10",
+                            "charging-per-kwh": "0.36",
+                            "currency": "EUR"
+                        }
                     },
                     {
                         "id": 8614,
@@ -337,12 +544,20 @@ Response::
                         "last-change": "2014-12-23T21:22:09+01:00",
                         "name": "Type2",
                         "speed": "22.2kW",
-                        "mode": "Mode3"
+                        "mode": "Mode3",
+                        "external-id": null,
+                        "prices": {
+                            "starting-fee": "0.00",
+                            "charging-per-hour": "0.00",
+                            "parking-per-hour": "1.10",
+                            "charging-per-kwh": "0.36",
+                            "currency": "EUR"
+                        }
                     }
                 ],
                 "prices": {
-                    "starting-fee": null,
-                    "charging-per-hour": null,
+                    "starting-fee": "0.00",
+                    "charging-per-hour": "0.00",
                     "parking-per-hour": "1.10",
                     "charging-per-kwh": "0.36",
                     "currency": "EUR"
@@ -401,7 +616,15 @@ Response::
                         "last-change": "2014-08-14T18:00:37+02:00",
                         "name": "Type2",
                         "speed": "3.7kW",
-                        "mode": "Mode3"
+                        "mode": "Mode3",
+                        "external-id": null,
+                        "prices": {
+                            "starting-fee": "0.00",
+                            "charging-per-hour": "0.00",
+                            "parking-per-hour": "0.00",
+                            "charging-per-kwh": "0.00",
+                            "currency": "EUR"
+                        }
                     },
                     {
                         "id": 25444,
@@ -409,14 +632,22 @@ Response::
                         "last-change": "2014-08-14T18:00:37+02:00",
                         "name": "3PinSquare",
                         "speed": "3.7kW",
-                        "mode": "Mode1"
+                        "mode": "Mode1",
+                        "external-id": null,
+                        "prices": {
+                            "starting-fee": "0.00",
+                            "charging-per-hour": "0.00",
+                            "parking-per-hour": "0.00",
+                            "charging-per-kwh": "0.00",
+                            "currency": "EUR"
+                        }
                     }
                 ],
                 "prices": {
-                    "starting-fee": null,
-                    "charging-per-hour": null,
-                    "parking-per-hour": null,
-                    "charging-per-kwh": null,
+                    "starting-fee": "0.00",
+                    "charging-per-hour": "0.00",
+                    "parking-per-hour": "0.00",
+                    "charging-per-kwh": "0.00",
                     "currency": "EUR"
                 }
             }
