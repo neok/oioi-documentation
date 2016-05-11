@@ -14,7 +14,8 @@ Fields
 ~~~~~~
 
 connector-id
-    The EVSE ID of the conncetor (string).
+    The EVSE ID of the connectors (string).
+    All connectors with the given connector-id will be updated.
     See also :ref:`EVSE <glossary-evse>`.
 status
     One of the following strings:
