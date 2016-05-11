@@ -14,4 +14,4 @@ Sphinx writes the resulting files into the `_build` directory.
 - sphinx-autobuild
 - readthedocs theme
 
-Run `pip install Sphinx sphinx-autobuild sphinx_rtd_theme`, if you have pip installed.
+Run `pip install -r requirements.txt`, if you have pip installed.
