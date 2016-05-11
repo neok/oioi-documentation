@@ -46,10 +46,14 @@ Fields
 
 success
    Whether or not the call was a success (boolean).
-is-stoppable
+is-stoppable (optional)
    Indicates whether the session can be stopped via "session-stop" API call (boolean).
-session-id
-   Optionally returned when a session can be stopped (string).
+session-id (optional)
+   The session id of the started session (string).
+
+   .. warning:: If the session can be remotely stopped (if ``is-stoppable`` is set and ``true``),
+                then the ``session-id`` is mandatory!
+                A ``session-stop`` is not possible without a session ID.
 
 Status codes
 ~~~~~~~~~~~~
