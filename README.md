@@ -1,4 +1,6 @@
 ![OIOI Logo](https://www.plugsurfing.com/assets/img/icons/ps-oioi-logo-small.png)
+![Build Status](https://api.travis-ci.org/PlugSurfing/oioi-documentation.svg)
+
 # OIOI Documentation
 Documentation for the OIOI interface to connect to the PlugSurfing service
 
