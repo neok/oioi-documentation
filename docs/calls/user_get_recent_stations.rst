@@ -2,8 +2,8 @@
 
 .. _calls-usergetrecentstations-docs:
 
-User Logout
-===========
+User Get Recent Stations
+========================
 
 Request
 -------
