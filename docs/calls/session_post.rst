@@ -36,7 +36,7 @@ user
 session-id
     A unique ID that identifies this session (string).
 
-    Can be any string.
+    The session ID must be a globally unique identifier.
 connector-id
     The EVSE ID of the connector where the session took place (string).
 session-interval
