@@ -4,5 +4,10 @@ python:
 install: pip install -r requirements.txt
 script: cd docs && make html
 notifications:
+  email:
+    recipients:
+      - martin.schenck@plugsurfing.com
+    on_success: never
+    on_failure: always
   slack:
     secure: c0JfDFEndmEt718ewzR1WgSoJ7uSD6U5i6LkqblwuiZaCnI6pByTJV3GTk2a6UPHwCHMTB/mtGMGcOPwIMhQFw/89fvbOsIJG8W1nfViZ+4fl7+a6+aa+mZwzTxSBr5lT8IHyZyQGGkydgTClKtKtK4qDOqNj1Y1JiXjpbVCj3FbA75Fqi0v65BIdFRckO+4xIdBNV3sWIHqwwW1jIzme5swUNwu3Gl6yGudHr0RTIM336IkG2RJ/+M5pwC/rTnl5kfJSw/3c5Eejg/j0HUzJe3CHWHOxZHDKXT6HdkgoDQ2lswMXidIspivseG+2UsjjxF9GmMczeS8+1MzfKlaXMo7bCQt2I4ZTcfzavbFwnGv49BXYYveSMJ6YeIbi7hyzoYaY7/9A36TV/awW67sofm5Zk8hh1orETu/ta/SU9TLlgkGbjNisoqIP9/a+RsBragob8axHU55uTn6miE7WeyRj1GCQFsbeCErS/7yPWIl3hDiN1M8roO6XYVEmYljPOs/saS6UNsnm2eOf5DVpyMX/uMe3x3enTsDGz+XUItsM0Wro9S55kEK/mQUxdEit7YcYFn9fPazq00RGbJ7ChVc7QeVnE5ldHbIoaeuQ9F8UgBLEChhvRVOJW4Hgl2garLinm5XT5EKkmqNzZ2xaudM9DF9WtgbEfU0LN/5zjE=
