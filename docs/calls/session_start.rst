@@ -51,9 +51,7 @@ is-stoppable (optional)
 session-id (optional)
    The session id of the started session (string).
 
-   .. warning:: If the session can be remotely stopped (if ``is-stoppable`` is set and ``true``),
-                then the ``session-id`` is mandatory!
-                A ``session-stop`` is not possible without a session ID.
+   .. warning:: Depending on the CPO's requirements, a ``session-id`` may be mandatory if the session is stoppable.
 
 Status codes
 ~~~~~~~~~~~~
