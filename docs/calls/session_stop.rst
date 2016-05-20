@@ -35,8 +35,10 @@ user
         then token is used for authentication instead of a password.
 connector-id
    The EVSE ID that identifies the connector where the session should be stopped (string).
-session-id
-   A unique ID that identifies this session (string).
+session-id (optional)
+   A unique ID that identifies this session (string). 
+
+   .. warning:: Depending on the CPO's requirements, a ``session-id`` may be mandatory.
 
 Response
 --------
