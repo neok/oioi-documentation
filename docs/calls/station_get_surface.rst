@@ -98,7 +98,7 @@ stations
         Latitude of this station (float).
     longitude
         Longitude of this station (float).
-    dynamic_status_summary
+    dynamic-status-summary
         Whether the station has available connectors (string).
 
         Can be one of:
@@ -108,10 +108,14 @@ stations
         * ``"OFFLINE"``
         * ``null``
 
-    owner_type
+    owner-type
         The type of the company (string or ``null``).
 
         E.g. "hotel".
+    last-static-change
+        The last time the station was updated (string).
+
+        The date/time format is RFC3339 (``Y-m-d\TH:i:sP``).
 
 Status codes
 ~~~~~~~~~~~~
