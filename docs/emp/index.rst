@@ -16,16 +16,10 @@ Additional HTTP Header
 ----------------------
 For basic info, see :ref:`Sending a Message to OIOI <request-docs>`.
 
-For EMPs that also want to let the other party manage their users,
-the HTTP request must contain an additional header::
-
-    B2B-Customer: <your-company-name>
-
-Example HTTP request if your company name is "Acme Inc."::
+Example HTTP request::
 
     Content-Type: application/json
     Authorization: key=a39ff3fb-fe0a-40a3-bdde-df6372c07c89
-    B2B-Customer: acme
 
     {
         "user-verify": {
@@ -36,4 +30,3 @@ Example HTTP request if your company name is "Acme Inc."::
         }
     }
 
-.. warning:: When connecting to PlugSurfing, make sure you communicate your chosen ``B2B-Customer`` header before the first request.
