@@ -32,6 +32,10 @@ Example HTTP request::
         }
     }
 
+.. important:: OIOI is not a REST interface. Instead, it is simple JSON over HTTP.
+               All requests are sent to the same endpoint.
+               The receiver will know which resource to use based on the request body.
+
 Response
 --------
 
