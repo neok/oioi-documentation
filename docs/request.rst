@@ -89,66 +89,86 @@ OIOI Response Codes
 .. note:: OIOI Error codes are not part of the OIOI response, yet.
           These codes will be added to the OIOI shortly.
 
+A more general code must always be accepted in parellel to the more
+specific code.
+For example: If a customer successfully starts a charging session,
+the code ``000`` is valid, as well as the more specific ``011``.
+The same is true for errors. If a client wants to authenticate a
+customer, any ``14x`` error could be returned. At the same time,
+a ``100`` could also be returned and must be accepted by the client.
+
 +------------+------------------------------------------------------------+
 | Error Code | Description                                                |
 +============+============================================================+
-| ``0xx``    | **PlugSurfing Errors**                                     |
+| ``0xx``    | **Success**                                                |
 +------------+------------------------------------------------------------+
-| ``000``    | System error                                               |
+| ``000``    | Succes                                                     |
 +------------+------------------------------------------------------------+
-| ``001``    | Database error                                             |
+| ``011``    | Successfully started a charging session                    |
+|            |                                                            |
+|            | The customer is charging at the EVSE                       |
 +------------+------------------------------------------------------------+
-| ``002``    | System timeout                                             |
+| ``012``    | Successfully authorized a charging session                 |
+|            |                                                            |
+|            | The customer must now plug in the cable to start           |
 +------------+------------------------------------------------------------+
-| ``040``    | Authentication failed: No positive authentication response |
+| ``1xx``    | **PlugSurfing Errors**                                     |
 +------------+------------------------------------------------------------+
-| ``041``    | Authentication failed: Invalid email or password           |
+| ``100``    | System error                                               |
 +------------+------------------------------------------------------------+
-| ``042``    | Authentication failed: Invalid email                       |
+| ``101``    | Database error                                             |
 +------------+------------------------------------------------------------+
-| ``043``    | Authentication failed: Email already exists                |
+| ``102``    | System timeout                                             |
 +------------+------------------------------------------------------------+
-| ``044``    | Authentication failed: Email does not exist                |
+| ``140``    | Authentication failed: No positive authentication response |
 +------------+------------------------------------------------------------+
-| ``080``    | EVSE ID unknown                                            |
+| ``141``    | Authentication failed: Invalid email or password           |
 +------------+------------------------------------------------------------+
-| ``090``    | EVCO ID error                                              |
+| ``142``    | Authentication failed: Invalid email                       |
 +------------+------------------------------------------------------------+
-| ``091``    | EVCO ID unknown                                            |
+| ``143``    | Authentication failed: Email already exists                |
 +------------+------------------------------------------------------------+
-| ``092``    | EVCO ID locked                                             |
+| ``144``    | Authentication failed: Email does not exist                |
 +------------+------------------------------------------------------------+
-| ``093``    | EVCO ID has no valid payment method                        |
+| ``180``    | EVSE ID unknown                                            |
 +------------+------------------------------------------------------------+
-| ``1xx``    | **Client Error**                                           |
+| ``190``    | EVCO ID error                                              |
 +------------+------------------------------------------------------------+
-| ``100``    | Client request error                                       |
+| ``191``    | EVCO ID unknown                                            |
 +------------+------------------------------------------------------------+
-| ``110``    | Invalid API key                                            |
+| ``192``    | EVCO ID locked                                             |
 +------------+------------------------------------------------------------+
-| ``120``    | API key not allowed to access the requested resource       |
+| ``193``    | EVCO ID has no valid payment method                        |
 +------------+------------------------------------------------------------+
-| ``130``    | Invalid request format                                     |
+| ``2xx``    | **Client Error**                                           |
 +------------+------------------------------------------------------------+
-| ``2xx``    | **Operator and EVSE Errors**                               |
+| ``200``    | Client request error                                       |
 +------------+------------------------------------------------------------+
-| ``200``    | System error                                               |
+| ``210``    | Invalid API key                                            |
 +------------+------------------------------------------------------------+
-| ``202``    | System timeout                                             |
+| ``220``    | API key not allowed to access the requested resource       |
 +------------+------------------------------------------------------------+
-| ``210``    | EVSE error                                                 |
+| ``230``    | Invalid request format                                     |
 +------------+------------------------------------------------------------+
-| ``212``    | EVSE timeout                                               |
-+------------+------------------------------------------------------------+
-| ``220``    | EVSE already in use                                        |
-+------------+------------------------------------------------------------+
-| ``221``    | No EV connected to EVSE                                    |
-+------------+------------------------------------------------------------+
-| ``3xx``    | **Hub Errors**                                             |
+| ``3xx``    | **Operator and EVSE Errors**                               |
 +------------+------------------------------------------------------------+
 | ``300``    | System error                                               |
 +------------+------------------------------------------------------------+
 | ``302``    | System timeout                                             |
++------------+------------------------------------------------------------+
+| ``310``    | EVSE error                                                 |
++------------+------------------------------------------------------------+
+| ``312``    | EVSE timeout                                               |
++------------+------------------------------------------------------------+
+| ``320``    | EVSE already in use                                        |
++------------+------------------------------------------------------------+
+| ``321``    | No EV connected to EVSE                                    |
++------------+------------------------------------------------------------+
+| ``4xx``    | **Hub Errors**                                             |
++------------+------------------------------------------------------------+
+| ``400``    | System error                                               |
++------------+------------------------------------------------------------+
+| ``402``    | System timeout                                             |
 +------------+------------------------------------------------------------+
 | ``8xx``    | **Payment Provider Errors**                                |
 +------------+------------------------------------------------------------+
