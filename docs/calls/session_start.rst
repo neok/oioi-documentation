@@ -25,6 +25,8 @@ user
         * ``"rfid"``
         * ``"username"``
 
+        .. note:: For session-start and session-stop it is common to use ``"evco-id"`` as the identifier-type.
+
     identifier
         The identifier is something that uniquely identifies the customer,
         depending on the identifier-type (string).
