@@ -25,7 +25,8 @@ user
         * ``"rfid"``
         * ``"username"``
 
-        .. note:: For session-start and session-stop it is common to use ``"evco-id"`` as the identifier-type.
+        .. warning:: For a session stop request,
+                     it is usually required that the ``"identifier-type"`` **must** be ``"evco-id"``.
 
     identifier
         The identifier is something that uniquely identifies the customer,
@@ -38,7 +39,7 @@ user
 connector-id
    The EVSE ID that identifies the connector where the session should be stopped (string).
 session-id (optional)
-   A unique ID that identifies this session (string). 
+   A unique ID that identifies this session (string).
 
    .. warning:: Depending on the CPO's requirements, a ``session-id`` may be mandatory.
 
@@ -69,9 +70,8 @@ Request::
     {
         "session-stop": {
             "user": {
-                "identifier-type": "username",
-                "identifier": "youridentifier",
-                "token": "87d4e3085af04671834ebeb127df33bf"
+                "identifier-type": "evco-id",
+                "identifier": "DE*8PS*123456*7"
             },
             "connector-id": "1356",
             "session-id": "dfdf"
