@@ -51,13 +51,21 @@ Fields
 ~~~~~~
 
 bills
-   This field contains the bills for the requested date interval (array)
+   This field contains the bills for the requested date interval (array).
 
    external-session-ids
-     List of session ID's for the invoice (array)
+     List of session ID's for the invoice (array).
 
    bill
-     URL with link to the invoice (object)
+     URL with link to the invoice (object).
+
+Status codes
+~~~~~~~~~~~~
+
+200 OK
+   The request was processed successfully.
+401 Unauthorized
+   The username, rfid or token does not exist.
 
 Examples
 --------
