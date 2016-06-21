@@ -118,6 +118,9 @@ stations
 
         The date/time format is RFC3339 (``Y-m-d\TH:i:sP``).
 
+    connector-statuses
+        Array of connectors' statuses (id (string): status (string)).
+
 Status codes
 ~~~~~~~~~~~~
 
@@ -169,7 +172,11 @@ Response::
                 "latitude": 51.516123,
                 "longitude": 6.322554,
                 "dynamic_status_summary": null,
-                "owner_type": null
+                "owner_type": null,
+                "connector-statuses": {
+                    "165946": "Available",
+                    "165947": "Available"
+                }
             },
             {
                 "id": 1622,
@@ -177,7 +184,10 @@ Response::
                 "latitude": 51.51599,
                 "longitude": 6.322551,
                 "dynamic_status_summary": null,
-                "owner_type": null
+                "owner_type": null,
+                "connector-statuses": {
+                    "142867": "Unknown"
+                }
             }
         ]
     }
