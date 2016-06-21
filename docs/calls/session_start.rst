@@ -25,7 +25,8 @@ user
         * ``"rfid"``
         * ``"username"``
 
-        .. note:: For session-start and session-stop it is common to use ``"evco-id"`` as the identifier-type.
+        .. warning:: For a session stop request,
+                     it is usually required that the ``"identifier-type"`` **must** be ``"evco-id"``.
 
     identifier
         The identifier is something that uniquely identifies the customer,
@@ -73,9 +74,8 @@ Request::
     {
        "session-start": {
            "user": {
-               "identifier-type": "username",
-               "identifier": "youridentifier",
-               "token": "87d4e3085af04671834ebeb127df33bf"
+               "identifier-type": "evco-id",
+               "identifier": "DE*8PS*123456*7"
            },
            "connector-id": "1356",
            "payment-reference": "1212"
