@@ -193,6 +193,7 @@ stations
             * ``"T15"``
             * ``"T23"``
             * ``"Marechal"``
+            * ``"TypeE"``
 
         speed (optional)
             Max. available charging speed of the connector (string).

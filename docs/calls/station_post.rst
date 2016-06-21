@@ -93,6 +93,7 @@ station
                 * ``"T15"``
                 * ``"T23"``
                 * ``"Marechal"``
+                * ``"TypeE"``
 
                 If your type is missing, please do not hesitate to contact PlugSurfing.
             speed

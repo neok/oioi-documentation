@@ -62,6 +62,7 @@ filters
         * ``"T15"``
         * ``"T23"``
         * ``"Marechal"``
+        * ``"TypeE"``
 
     connector-speeds-greater
         Minimum value for charging speed in kW (float).
