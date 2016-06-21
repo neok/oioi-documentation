@@ -28,67 +28,71 @@ user
     identifier
         The identifier is something that uniquely identifies the customer,
         depending on the identifier-type (string).
+
     token (optional)
         A token can be used to authenticate the user (string).
 
         For example: if the identifier type is username and the identifier is the user's username,
         then token is used for authentication instead of a password.
 
-details
     first-name
-        A string. Can be null.
+       First name of a user, can be null (string).
 
     last-name
-        A string. Can be null.
+       Last name of a user, can be null (string).
 
     address
-        The address where the suer lives. Can be null.
+       The address where the user lives. Can be null (object).
 
-        street
-            A string.
+       street
+           Street name (string).
 
-        street-number
-            A string.
+       street-number
+           Street number (string).
 
-        zip
-            A string.
+       zip
+           Zipcode for the address (string).
 
-        city
-            A string.
+       city
+           Name of the City (string).
 
-        country
-            string, mandatory
-            Please use international two letter codes (ISO 3166-1 alpha-2).
+       country
+           Country, mandatory (string).
+
+           Please use international two letter codes (ISO 3166-1 alpha-2).
 
     locale
-        A string defining the locale of the user. Two lower case letters. E.g. en for English or de for German. Can be null.
+        Defining the locale of the user (string).
+
+        Two lower case letters. E.g. en for English or de for German. Can be null.
 
     vat
-        A string. The VAT number is validated. Can be null.
+        The VAT number is validated, can be null (string).
 
     social-security-number
-        A string. Can be null.
+        Social security number, can be null (string).
 
     billing-name
-        A string. If the name on te bill should not be first and lastname. Can be null.
+        If the name on te bill should not be first and lastname. Can be null (string).
 
     billing-address
-        In case the address on the bill shall be different from the address, it can be specified. Can be null.
+        In case the address on the bill shall be different from the address, it can be specified. Can be null (object).
 
         street
-            A string.
+            Street name (string).
 
         street-number
-            A string.
+            Street number (string).
 
         zip
-            A string.
+            Zipcode for the address (string).
 
         city
-            A string.
+            Name of the City (string).
 
         country
-            string, mandatory
+            Country, mandatory (string).
+
             Please use international two letter codes (ISO 3166-1 alpha-2).
 
 Response
@@ -106,6 +110,8 @@ Status codes
 ~~~~~~~~~~~~
 200 OK
    Request was processed successfully
+400 Invalid
+   If the country or VAT is invalid (reason is displayed in response)
 401 Unauthorized
    The token, username or identifier type were incorrect
 
@@ -148,16 +154,15 @@ Request::
 
 Response::
 
-    [
-        {
-            "user-post-details": {
-                "success": true
-            }
-        },
-        {
-            "user-post-details": {
-                "success": false,
-                "reason": "Could not validate VAT number: DE1234567"
-            }
+    {
+        "user-post-details": {
+            "success": true
         }
-    ]
+    }
+
+    {
+        "user-post-details": {
+            "success": false,
+            "reason": "Could not validate VAT number: DE1234567"
+        }
+    }
