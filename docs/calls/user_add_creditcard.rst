@@ -28,13 +28,11 @@ user
     identifier
         The identifier is something that uniquely identifies the customer,
         depending on the identifier-type (string).
-
     token (optional)
         A token can be used to authenticate the user (string).
 
         For example: if the identifier type is username and the identifier is the user's username,
         then token is used for authentication instead of a password.
-
 encrypted-data
     Encrypted credit card data (string)
 
@@ -53,7 +51,7 @@ Status codes
 200 OK
   Request was processed successfully
 400 Invalid
-   Credit card can not be added
+   Credit card cannot be added
 401 Unauthorized
    The token, username or identifier type were incorrect
 500 Internal Server Error

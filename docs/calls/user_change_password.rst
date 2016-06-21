@@ -15,10 +15,8 @@ Fields
 
 username
     This field identifies the customer by username or email (string).
-
 current-password
     Current password of the customer (string).
-
 new-password
     New password of the customer (string).
 
