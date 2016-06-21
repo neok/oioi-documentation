@@ -28,6 +28,7 @@ user
     identifier
         The identifier is something that uniquely identifies the customer,
         depending on the identifier-type (string).
+
     token (optional)
         A token can be used to authenticate the user (string).
 
@@ -35,7 +36,8 @@ user
         then token is used for authentication instead of a password.
 
 payment-type
-    The type of payment that shall be added (of type string).
+    The type of payment that shall be added (string).
+    
     Can be one of (directEbanking = Sofortueberweisung):
 
     * ``"paypal"``
