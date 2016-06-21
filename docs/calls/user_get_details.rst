@@ -28,7 +28,7 @@ user
     identifier
         The identifier is something that uniquely identifies the customer,
         depending on the identifier-type (string).
-        
+
     token (optional)
         A token can be used to authenticate the user (string).
 
@@ -45,60 +45,75 @@ user
     This field contains the user (object).
 
     first-name
-        A string, can be null.
+        First name of a user, can be null (string).
 
     last-name
-        A string, can be null.
+        Last name of a user, can be null (string).
 
     address
-        The address where the user lives. Can be null.
+        The address where the user lives. Can be null (object).
 
         street
-            A string.
+            Street name (string).
 
         street-number
-            A string.
+            Street number (string).
 
         zip
-            A string.
+            Zipcode for the address (string).
 
         city
-            A string.
+            Name of the City (string).
 
         country
-            String, mandatory. Please use international two letter codes (ISO 3166-1 alpha-2).
+            Country, mandatory (string).
+
+            Please use international two letter codes (ISO 3166-1 alpha-2).
 
     billing-name
-        A String. If the name on the bill should not be first and lastname. Can be null.
+        If the name on the bill should not be first and lastname. Can be null (string).
 
     billing-address
-        The address where the user lives. Can be null.
+        The address where the user lives. Can be null (object).
 
         street
-            A string.
+            Street name (string).
 
         street-number
-            A string.
+            Street number (string).
 
         zip
-            A string.
+            Zipcode for the address (string).
 
         city
-            A string.
+            Name of the City (string).
 
         country
-            String, mandatory. Please use international two letter codes (ISO 3166-1 alpha-2).
+            Country, mandatory (string).
+
+            Please use international two letter codes (ISO 3166-1 alpha-2).
 
     locale
-        A string defining the locale of the user. Two lower case letters. E.g. en for English or de for German. Can be null.
+        Locale of the user (string).
+
+        Two lower case letters. E.g. en for English or de for German. Can be null.
+
     vat
-        A string. The VAT number is validated. Can be null.
+        The VAT number is validated, can be null (string).
 
     social-security-number
-        A string. Can be null.
+        Social Security Number, can be null (string).
 
     evco-id
-        A String. The EVCO-ID of the Customer. Can be null.
+        The EVCO-ID of the Customer, can be null (string).
+
+Status codes
+~~~~~~~~~~~~
+
+200 OK
+    The request was processed successfully.
+401 Unauthorized
+    The username does not exist or the username and password/token did not match.
 
 Examples
 --------
