@@ -37,6 +37,8 @@ session-id
     A unique ID that identifies this session (string).
 
     The session ID must be a globally unique identifier.
+
+    .. note:: If you are the CPO and owner of the session, this identifier must be created by you.
 connector-id
     The EVSE ID of the connector where the session took place (string).
 session-interval
