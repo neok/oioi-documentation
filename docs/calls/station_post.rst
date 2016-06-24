@@ -22,6 +22,8 @@ station
 
     id
         An identifier that uniquely identifies the station in your system (string).
+
+        If you are a CPO, this identifier is created by you and must be globally unique.
     name
         The name is shown to the EV driver (string).
     description (optional)

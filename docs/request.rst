@@ -36,6 +36,8 @@ Example HTTP request::
                All requests are sent to the same endpoint.
                The receiver will know which resource to use based on the request body.
 
+.. important:: All data must be UTF-8 encoded.
+
 Response
 --------
 
