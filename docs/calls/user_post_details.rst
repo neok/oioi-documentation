@@ -35,65 +35,68 @@ user
         For example: if the identifier type is username and the identifier is the user's username,
         then token is used for authentication instead of a password.
 
-    first-name
-       First name of a user, can be null (string).
+    details
+        This field contains the details of a user (object)
 
-    last-name
-       Last name of a user, can be null (string).
+        first-name
+            First name of a user, can be null (string).
 
-    address
-       The address where the user lives. Can be null (object).
+        last-name
+            Last name of a user, can be null (string).
 
-       street
-           Street name (string).
+        address
+            The address where the user lives. Can be null (object).
 
-       street-number
-           Street number (string).
+            street
+                Street name (string).
 
-       zip
-           Zipcode for the address (string).
+            street-number
+                number (string).
 
-       city
-           Name of the City (string).
+            zip
+                Zipcode for the address (string).
 
-       country
-           Country, mandatory (string).
+            city
+                Name of the City (string).
 
-           Please use international two letter codes (ISO 3166-1 alpha-2).
+            country
+                Country, mandatory (string).
 
-    locale
-        Defining the locale of the user (string).
+                Please use international two letter codes (ISO 3166-1 alpha-2).
 
-        Two lower case letters. E.g. en for English or de for German. Can be null.
+        locale
+            Defining the locale of the user (string).
 
-    vat
-        The VAT number is validated, can be null (string).
+            Two lower case letters. E.g. en for English or de for German. Can be null.
 
-    social-security-number
-        Social security number, can be null (string).
+        vat
+            The VAT number is validated, can be null (string).
 
-    billing-name
-        If the name on te bill should not be first and lastname. Can be null (string).
+        social-security-number
+            Social security number, can be null (string).
 
-    billing-address
-        In case the address on the bill shall be different from the address, it can be specified. Can be null (object).
+        billing-name
+            If the name on te bill should not be first and lastname. Can be null (string).
 
-        street
-            Street name (string).
+        billing-address
+            In case the address on the bill shall be different from the address, it can be specified. Can be null (object).
 
-        street-number
-            Street number (string).
+            street
+                Street name (string).
 
-        zip
-            Zipcode for the address (string).
+            street-number
+                Street number (string).
 
-        city
-            Name of the City (string).
+            zip
+                Zipcode for the address (string).
 
-        country
-            Country, mandatory (string).
+            city
+                Name of the City (string).
 
-            Please use international two letter codes (ISO 3166-1 alpha-2).
+            country
+                Country, mandatory (string).
+
+                Please use international two letter codes (ISO 3166-1 alpha-2).
 
 Response
 --------
@@ -152,13 +155,15 @@ Request::
         }
     }
 
-Response::
+Response (success true)::
 
     {
         "user-post-details": {
             "success": true
         }
     }
+
+Response (success false)::
 
     {
         "user-post-details": {
