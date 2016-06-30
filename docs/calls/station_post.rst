@@ -21,7 +21,10 @@ station
     An object that holds the station data. Fields of a station are:
 
     id
-        An identifier that uniquely identifies the station in your system (string).
+        An identifier that uniquely identifies the station (string).
+
+        .. important:: Every station id must be globally unique.
+
     name
         The name is shown to the EV driver (string).
     description (optional)
@@ -69,7 +72,11 @@ station
 
             id
                 The EVSE ID of the conncetor (string).
+                
                 See also :ref:`EVSE <glossary-evse>`.
+
+                .. important:: The id of every connector must be globally unique.
+
             name
                 The name of the type of connector (string).
 
