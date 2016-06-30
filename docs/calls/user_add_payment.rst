@@ -37,7 +37,7 @@ user
 
 payment-type
     The type of payment that shall be added (string).
-    
+
     Can be one of (directEbanking = Sofortueberweisung):
 
     * ``"paypal"``
@@ -51,7 +51,7 @@ Fields
 ~~~~~~
 
 url
-   The JSON and UTF encoded URL for the request (of type string)
+   The JSON and UTF encoded URL for the request (string)
 
 Status codes
 ~~~~~~~~~~~~
