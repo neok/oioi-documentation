@@ -57,7 +57,7 @@ bills
      List of session ID's for the invoice (array).
 
    bill
-     URL with link to the invoice (object).
+     URL with link to the invoice (string).
 
 Status codes
 ~~~~~~~~~~~~
@@ -65,7 +65,7 @@ Status codes
 200 OK
    The request was processed successfully.
 401 Unauthorized
-   The username, rfid or token does not exist.
+   The token, username or identifier type were incorrect.
 
 Examples
 --------
