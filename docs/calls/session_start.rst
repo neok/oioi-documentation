@@ -25,7 +25,7 @@ user
         * ``"rfid"``
         * ``"username"``
 
-        .. warning:: For a session stop request,
+        .. warning:: For a session start request,
                      it is usually required that the ``"identifier-type"`` **must** be ``"evco-id"``.
 
     identifier
