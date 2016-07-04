@@ -55,6 +55,8 @@ stations
 
         The charge point operator is the company responsible for the functioning of the station.
         Access to the station usually also goes through the CPO.
+    operator-logo (optional)
+        URL with link to the logo image.
     floor-level (optional)
         On which floor the station is located, for example in a parking house (integer).
     is-free-charge
@@ -319,6 +321,7 @@ Response::
                     "fax": null
                 },
                 "operator-company-id": 710,
+                "operator-logo": "http://operatorlogopath.png",
                 "floor-level": null,
                 "is-free-charge": false,
                 "last-static-change": "2015-01-23T18:54:52+01:00",
@@ -383,6 +386,7 @@ Response::
                     "fax": null
                 },
                 "operator-company-id": 715,
+                "operator-logo": null,
                 "floor-level": null,
                 "is-free-charge": false,
                 "last-static-change": "2015-01-23T18:54:52+01:00",
@@ -487,6 +491,7 @@ Response::
                     "fax": null
                 },
                 "operator-company-id": 715,
+                "operator-logo": null,
                 "floor-level": null,
                 "is-free-charge": false,
                 "last-static-change": "2015-01-23T18:54:52+01:00",
@@ -580,6 +585,7 @@ Response::
                     "fax": null
                 },
                 "operator-company-id": 39,
+                "operator-logo": null,
                 "floor-level": null,
                 "is-free-charge": true,
                 "last-static-change": "2015-01-23T18:54:52+01:00",
