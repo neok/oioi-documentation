@@ -56,7 +56,7 @@ stations
         The charge point operator is the company responsible for the functioning of the station.
         Access to the station usually also goes through the CPO.
     operator-logo (optional)
-        URL with link to the logo image.
+        URL to the logo image (string).
     floor-level (optional)
         On which floor the station is located, for example in a parking house (integer).
     is-free-charge
