@@ -134,11 +134,11 @@ stations
 
         One of:
 
-        * ``"AVAILABLE"``
-        * ``"OCCUPIED"``
-        * ``"RESERVED"``
-        * ``"OFFLINE"``
-        * ``"UNKNOWN"``
+        * ``"Available"``
+        * ``"Occupied"``
+        * ``"Reserved"``
+        * ``"Offline"``
+        * ``"Unknown"``
 
     is-validated
         boolean
@@ -163,11 +163,11 @@ stations
 
             One of:
 
-            * ``"AVAILABLE"``
-            * ``"OCCUPIED"``
-            * ``"RESERVED"``
-            * ``"OFFLINE"``
-            * ``"UNKNOWN"``
+            * ``"Available"``
+            * ``"Occupied"``
+            * ``"Reserved"``
+            * ``"Offline"``
+            * ``"Unknown"``
 
         last-change (optional)
             string (format: ``"2016-05-09T04:08:06+02:00"``)
@@ -359,7 +359,7 @@ Response::
                 "connectors": [
                     {
                         "id": 11154,
-                        "status": "UNKNOWN",
+                        "status": "Unknown",
                         "last-change": "2014-07-01T15:24:28+02:00",
                         "name": "Schuko",
                         "speed": "3.7kW",
@@ -425,7 +425,7 @@ Response::
                 "is-reservable": false,
                 "has-dynamic-info": false,
                 "is-open-24": false,
-                "dynamic-status-summary": "AVAILABLE",
+                "dynamic-status-summary": "Available",
                 "is-validated": true,
                 "is-private": false,
                 "owner-company-id": 28,
@@ -436,7 +436,7 @@ Response::
                 "connectors": [
                     {
                         "id": 11451,
-                        "status": "AVAILABLE",
+                        "status": "Available",
                         "last-change": "2014-07-01T15:25:40+02:00",
                         "name": "Chademo",
                         "speed": "52kW",
@@ -452,7 +452,7 @@ Response::
                     },
                     {
                         "id": 11452,
-                        "status": "OCCUPIED",
+                        "status": "Occupied",
                         "last-change": "2014-07-01T15:25:40+02:00",
                         "name": "Type2",
                         "speed": "22.2kW",
@@ -517,7 +517,7 @@ Response::
                 "is-reservable": false,
                 "has-dynamic-info": true,
                 "is-open-24": true,
-                "dynamic-status-summary": "AVAILABLE",
+                "dynamic-status-summary": "Available",
                 "is-validated": true,
                 "is-private": false,
                 "owner-company-id": 28,
@@ -530,7 +530,7 @@ Response::
                 "connectors": [
                     {
                         "id": 8613,
-                        "status": "AVAILABLE",
+                        "status": "Available",
                         "last-change": "2014-12-29T21:48:08+01:00",
                         "name": "Type2",
                         "speed": "22.2kW",
@@ -546,7 +546,7 @@ Response::
                     },
                     {
                         "id": 8614,
-                        "status": "AVAILABLE",
+                        "status": "Available",
                         "last-change": "2014-12-23T21:22:09+01:00",
                         "name": "Type2",
                         "speed": "22.2kW",
@@ -619,7 +619,7 @@ Response::
                 "connectors": [
                     {
                         "id": 25443,
-                        "status": "UNKNOWN",
+                        "status": "Unknown",
                         "last-change": "2014-08-14T18:00:37+02:00",
                         "name": "Type2",
                         "speed": "3.7kW",
@@ -635,7 +635,7 @@ Response::
                     },
                     {
                         "id": 25444,
-                        "status": "UNKNOWN",
+                        "status": "Unknown",
                         "last-change": "2014-08-14T18:00:37+02:00",
                         "name": "3PinSquare",
                         "speed": "3.7kW",

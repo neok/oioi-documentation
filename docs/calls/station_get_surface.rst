@@ -104,9 +104,9 @@ stations
 
         Can be one of:
 
-        * ``"AVAILABLE"``
-        * ``"OCCUPIED"``
-        * ``"OFFLINE"``
+        * ``"Available"``
+        * ``"Occupied"``
+        * ``"Offline"``
         * ``null``
 
     owner-type

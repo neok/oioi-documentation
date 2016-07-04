@@ -61,9 +61,9 @@ stations
 
         Can be one of:
 
-        * ``"AVAILABLE"``
-        * ``"OCCUPIED"``
-        * ``"OFFLINE"``
+        * ``"Available"``
+        * ``"Occupied"``
+        * ``"Offline"``
         * ``null``
 
     owner-type
@@ -107,7 +107,7 @@ Response::
                         "name": "Vattenfall Ladestation",
                         "latitude": 52.52119,
                         "longitude": 13.32143,
-                        "dynamic-status-summary": "AVAILABLE",
+                        "dynamic-status-summary": "Available",
                         "owner-type": null
                     },
                     {
@@ -115,7 +115,7 @@ Response::
                         "name": "Hotel Station",
                         "latitude": 52.82119,
                         "longitude": 12.12143,
-                        "dynamic-status-summary": "OCCUPIED",
+                        "dynamic-status-summary": "Occupied",
                         "owner-type": "hotel"
                     }
                 ]
