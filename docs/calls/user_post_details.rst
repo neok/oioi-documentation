@@ -11,7 +11,7 @@ Request
 ``"user-post-details"`` identifies the call as user-post-details call.
 
 Fields
-~~~~~
+~~~~~~
 
 user
     This field identifies the customer (object).

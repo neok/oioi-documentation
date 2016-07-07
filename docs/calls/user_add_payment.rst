@@ -63,6 +63,7 @@ Examples
 --------
 
 Request::
+
     {
         "user-add-payment": {
             "payment-type": "paypal",
