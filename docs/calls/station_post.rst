@@ -9,6 +9,9 @@ Station Post
 
 .. warning:: The station's connectors' IDs may not be changed once it is created.
 
+You have to send one request for each station.
+It is not possible to send multiple stations with one request.
+
 Request
 -------
 
@@ -72,7 +75,7 @@ station
 
             id
                 The EVSE ID of the conncetor (string).
-                
+
                 See also :ref:`EVSE <glossary-evse>`.
 
                 .. important:: The id of every connector must be globally unique.
