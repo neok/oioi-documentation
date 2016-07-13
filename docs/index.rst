@@ -24,6 +24,7 @@ The main documentation for the OIOI is organized into a couple of sections:
 
    introduction
    request
+   testaccount
    glossary
 
 .. _cpo-docs:
