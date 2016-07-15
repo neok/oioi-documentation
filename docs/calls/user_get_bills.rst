@@ -59,13 +59,24 @@ bills
    bill
      URL with link to the invoice (string).
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
    The request was processed successfully.
 401 Unauthorized
    The token, username or identifier type were incorrect.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
 
 Examples
 --------
@@ -105,5 +116,9 @@ Response::
                     "bill": "https://api.plugsurfing.com/uploads/bills/Invoice-201503052-10000.pdf"
                 }
             ]
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

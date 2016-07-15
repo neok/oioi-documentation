@@ -47,8 +47,6 @@ Response
 Fields
 ~~~~~~
 
-success
-   Whether or not the call was a success (boolean).
 is-stoppable (optional)
    Indicates whether the session can be stopped via "session-stop" API call (boolean).
 session-id (optional)
@@ -56,8 +54,8 @@ session-id (optional)
 
    .. warning:: Depending on the CPO's requirements, a ``session-id`` may be mandatory if the session is stoppable.
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
    Request was processed successfully
@@ -65,6 +63,19 @@ Status codes
    The token, username or identifier type were incorrect
 404 Not found
    A connector could not be found by the supplied identifier
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
+181
+    EVSE not found
 
 Examples
 --------
@@ -85,7 +96,8 @@ Request::
 Response::
 
     {
-        "session-start": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

@@ -41,14 +41,8 @@ rfid
 Response
 --------
 
-Fields
-~~~~~~
-
-success
-   Whether or not the call was a success (boolean).
-
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
   Request was processed successfully
@@ -56,6 +50,19 @@ Status codes
   User could not be authenticated
 409
   RFID already exists for another user
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
+190
+    EVCO ID error
 
 Examples
 --------
@@ -76,7 +83,8 @@ Request::
 Response::
 
     {
-        "user-add-rfid": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

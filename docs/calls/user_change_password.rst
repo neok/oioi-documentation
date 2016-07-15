@@ -23,11 +23,19 @@ new-password
 Response
 --------
 
-Fields
-~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
+200 OK
+    Request was processed successfully
 
-password-changed
-    Whether or not the the password was changed (boolean).
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
 
 Examples
 --------
@@ -45,7 +53,8 @@ Request::
 Response::
 
     {
-        "user": {
-            "password-changed": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

@@ -41,20 +41,29 @@ rfid
 Response
 --------
 
-Fields
-~~~~~~
-
-success
-   Whether or not the call was a success (boolean).
-
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 200 OK
   Successfull
 401 Unauthorized
   The token, username or identifier type were incorrect
 404
   The RFID for that user could not be found
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
+190
+    EVCO ID error
+191
+    EVCO ID not found
 
 Examples
 --------
@@ -75,7 +84,8 @@ Request::
 Response::
 
     {
-        "user-block-rfid": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

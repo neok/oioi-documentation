@@ -37,20 +37,25 @@ user
 Response
 --------
 
-Fields
-~~~~~~
-
-success
-    ``true``, if the logout was a success, ``false`` otherwise (boolean).
-
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     The request was processed successfully.
     The user is logged out.
 401 Unauthorized
     The username does not exist or the username and password/token did not match.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
 
 Examples
 --------
@@ -70,7 +75,8 @@ Request::
 Response::
 
     {
-        "user-logout": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

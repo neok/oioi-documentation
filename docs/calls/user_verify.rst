@@ -33,8 +33,6 @@ Response
 Fields
 ~~~~~~
 
-verified
-    ``true``, if the verification was a success, ``false`` otherwise (boolean).
 token
     A token to authenticate the user in future requests (string).
     
@@ -42,14 +40,27 @@ token
     When you make future requests where the user needs to be authenticated,
     you supply this token with the request.
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     The request was processed successfully.
     The username and password/token are correct.
 401 Unauthorized
    The username does not exist or the username and password/token did not match.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+141
+    Authentication failed: Invalid email or password
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
 
 Examples
 --------
@@ -69,8 +80,11 @@ Response::
 
     {
         "user": {
-            "verified": true,
             "token": "e2af72d7a9084431ab0b1a5c42df7745"
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }
 

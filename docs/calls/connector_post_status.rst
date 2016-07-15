@@ -33,14 +33,8 @@ partner-identifier
 Response
 --------
 
-Fields
-~~~~~~
-
-success
-    Whether or not the call was a success (boolean)
-
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200
     All went well
@@ -48,6 +42,13 @@ Status codes
     The connector or the status were not found
 422
     The connector could not be identified uniquely
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+181
+    EVSE not found
 
 Examples
 --------
@@ -65,7 +66,8 @@ Request::
 Response::
 
     {
-        "connector-post-status": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

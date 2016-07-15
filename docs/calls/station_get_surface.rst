@@ -121,11 +121,16 @@ stations
     connector-statuses
         Array of connectors' statuses (id (string): status (string)).
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     The request was processed successfully.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
 
 Examples
 --------
@@ -189,5 +194,9 @@ Response::
                     "142867": "Unknown"
                 }
             }
-        ]
+        ],
+        "result": {
+            "code": 0,
+            "message": "Success."
+        }
     }

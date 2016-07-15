@@ -78,10 +78,22 @@ Response
 Fields
 ~~~~~~
 
-success
-    Whether or not the call was a success (of type boolean).
 reason
     If ``success`` was ``false``, ``reason`` explains what the problem was. This field is of type string. Will be ``null`` on success.
+
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
+200 OK
+   Request was processed successfully
+500 Invalid
+   If any error occurred
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+100
+    System error
 
 Examples
 --------
@@ -112,9 +124,9 @@ Request::
 Response::
 
     {
-        "session": {
-            "success": true,
-            "reason": null
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }
 

@@ -181,11 +181,12 @@ partner-identifier
 Response
 --------
 
-Fields
-~~~~~~
-
-success
-    Whether or not the call was a success (of type boolean)
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+211
+    Invalid partner identifier
 
 Examples
 --------
@@ -267,8 +268,9 @@ Request::
 Response ::
 
     {
-        "station-post": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }
 

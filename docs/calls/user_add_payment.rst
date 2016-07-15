@@ -53,11 +53,18 @@ Fields
 url
    The JSON and UTF encoded URL for the request (string)
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
   Request was processed successfully
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+800
+    Payment system error
 
 Examples
 --------
@@ -80,5 +87,10 @@ Response::
     {
         "user-add-payment": {
             "url": "https://test.adyen.com/hpp/details.shtml?&paymentAmount=100&currencyCode=EUR&shipBeforeDate=2015-03-01&merchantReference=Authorization+youridentifier&skinCode=GfUFVL5L&merchantAccount=PlugSurfing&sessionValidity=2015-02-27T14%3A47%3A28%2B01%3A00&shopperEmail=customer%40gmail.com&shopperReference=youridentifier&allowedMethods=&blockedMethods=&offset=&recurringContract=RECURRING&orderData=H4sIAAAAAAAAAwvIKU0PLi1Ky8xLBwBbAAADCwAAAA%3D%3D&countryCode=DE&brandCode=paypal&merchantSig=2LUxxOwNdXV9nnAAAAJ4J%2FE4V8%3D"
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
+
     }

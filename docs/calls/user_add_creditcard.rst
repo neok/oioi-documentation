@@ -39,14 +39,8 @@ encrypted-data
 Response
 --------
 
-Fields
-~~~~~~
-
-success
-   Whether or not the call was a success (boolean).
-
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
   Request was processed successfully
@@ -56,6 +50,19 @@ Status codes
    The token, username or identifier type were incorrect
 500 Internal Server Error
   Credit Card cannot be added
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
+870
+    Credit card error
 
 Examples
 --------
@@ -76,7 +83,8 @@ Request::
 Response::
 
     {
-        "card-added": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

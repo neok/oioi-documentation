@@ -103,20 +103,30 @@ Response
 
 Fields
 ~~~~~~
-success
-    A boolean specifying whether the request was handled successfully.
-
 reason
     An optional response field. If present, it is a string stating the reason for an error.
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 200 OK
    Request was processed successfully
 400 Invalid
    If the country or VAT is invalid (reason is displayed in response)
 401 Unauthorized
    The token, username or identifier type were incorrect
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
+230
+    Invalid request format
 
 Examples
 --------
@@ -158,8 +168,9 @@ Request::
 Response (success true)::
 
     {
-        "user-post-details": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }
 
@@ -167,7 +178,10 @@ Response (success false)::
 
     {
         "user-post-details": {
-            "success": false,
             "reason": "Could not validate VAT number: DE1234567"
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

@@ -29,8 +29,6 @@ Response
 Fields
 ~~~~~~
 
-registered
-    ``true``, if the registration was a success, ``false`` otherwise (boolean).
 token
     A token to authenticate the user in future requests (string).
     
@@ -41,8 +39,8 @@ evco-id
     The EVCO ID of the user (string).
     See also :ref:`EVCO ID <glossary-evco-id>`
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     The request was processed successfully.
@@ -50,6 +48,13 @@ Status codes
 400 Bad Request
     The user could not be registered.
     This is due to the email or username already being taken.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+143
+    Authentication failed: Email already exists
 
 Examples
 --------
@@ -69,9 +74,12 @@ Response::
 
     {
         "user": {
-            "registered": true,
             "token": "e2af72d7a9084431ab0b1a5c42df7745",
             "evco-id": "DE*8PS*123456*7"
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }
 

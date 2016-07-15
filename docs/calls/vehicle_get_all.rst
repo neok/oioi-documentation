@@ -75,11 +75,16 @@ vehicles
         * ``"T23"``
         * ``"Marechal"``
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
    Request was processed successfully
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
 
 Examples
 --------
@@ -120,5 +125,9 @@ Response::
                     ]
                 }
             ]
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

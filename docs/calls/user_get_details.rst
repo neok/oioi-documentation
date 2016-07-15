@@ -107,13 +107,24 @@ user
     evco-id
         The EVCO-ID of the Customer, can be null (string).
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     The request was processed successfully.
 401 Unauthorized
     The username does not exist or the username and password/token did not match.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
 
 Examples
 --------
@@ -155,5 +166,9 @@ Response::
             "vat": "DE123456",
             "social-security-number": "SocialSecNumber",
             "evco-id": "DE*8PS*156456730*9"
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

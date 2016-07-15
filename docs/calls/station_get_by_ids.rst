@@ -279,11 +279,16 @@ companies
 
         E.g. "hotel".
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     The request was processed successfully.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
 
 Examples
 --------
@@ -793,5 +798,9 @@ Response::
                 "description": null,
                 "type": null
             }
-        ]
+        ],
+        "result": {
+            "code": 0,
+            "message": "Success."
+        }
     }

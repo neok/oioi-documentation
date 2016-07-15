@@ -32,16 +32,20 @@ Response
 Fields
 ~~~~~~
 
-success
-    Whether or not the call was a success (boolean).
 processed
     The number of new UIDs added by this call (integer).
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     Request was processed successfully
+
+Result codes
+~~~~~~~~~~~~
+
+0
+    Success
 
 Examples
 --------
@@ -62,7 +66,10 @@ Response::
 
     {
         "rfid": {
-            "success": true,
             "processed": 2
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

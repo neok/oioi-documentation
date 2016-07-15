@@ -46,14 +46,8 @@ session-id (optional)
 Response
 --------
 
-Fields
-~~~~~~
-
-success
-   Whether or not the call was a success (boolean).
-
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
    Request was processed successfully
@@ -61,6 +55,19 @@ Status codes
    The token, username or identifier type were incorrect
 404 Not found
    A connector could not be found by the supplied identifier
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
+181
+    EVSE not found
 
 Examples
 --------
@@ -81,7 +88,8 @@ Request::
 Response::
 
     {
-        "session-stop": {
-            "success": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

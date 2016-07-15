@@ -80,13 +80,24 @@ sessions
         The address where the session took place (string).
 
 
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     The request was processed successfully.
 401 Unauthorized
     The username does not exist or the username and password/token did not match.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+140
+    Authentication failed: No positive authentication response
+144
+    Authentication failed: Email does not exist
+145
+    Authentication failed: User token not valid
 
 Examples
 --------
@@ -145,5 +156,9 @@ Response::
                     "address": "Tempelhofer Ufer 17, 10963 Berlin, Germany"
                 }
             ]
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

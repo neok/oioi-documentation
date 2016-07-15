@@ -26,20 +26,26 @@ rfid
 Response
 --------
 
-Fields
-~~~~~~
-
-verified
-    ``true`` if the given UID is valid, ``false`` otherwise.
-
-Status code
-~~~~~~~~~~~
+HTTP Status code
+~~~~~~~~~~~~~~~~
 
 200 OK
     Request was processed successfully
 404 Not found
     An active RFID with the given UID could not be found.
     However, it is possible that the RFID is known, but currently blocked.
+
+Result code
+~~~~~~~~~~~
+
+0
+    Success
+191
+    EVCO ID not found
+192
+    EVCO ID locked
+193
+    EVCO ID has no valid payment method
 
 Examples
 --------
@@ -55,7 +61,8 @@ Request::
 Response::
 
     {
-        "rfid-verify": {
-            "verified": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }

@@ -19,20 +19,21 @@ identifier
 Response
 --------
 
-Fields
-~~~~~~
-
-password-reset
-    ``true``, if the reset was a success, ``false`` otherwise (boolean).
-
-Status codes
-~~~~~~~~~~~~
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
 
 200 OK
     The request was processed successfully.
     The password of the user is reset and the user will receive an email with a link.
 404 Not Found
     No user with the given username/email found.
+
+Result codes
+~~~~~~~~~~~~
+0
+    Success
+144
+    Authentication failed: Email does not exist
 
 Examples
 --------
@@ -48,7 +49,8 @@ Request::
 Response::
 
     {
-        "user": {
-            "password-reset": true
+        "result": {
+            "code": 0,
+            "message": "Success."
         }
     }
