@@ -46,6 +46,8 @@ EVSE
     * The literal ``E``
     * ID of the EVSE (letters, numbers, and the literal ``*``; 1 - 30 characters)
 
+    .. note:: When you are based in Germany, please see here for more general information and details on how to register a CPO identifier: `BDEW Codes`_.
+
     See also `Wikipedia Charging Station`_.
 
 .. _glossary-cpo:
@@ -77,6 +79,8 @@ EVCO ID
     * ID of the EVCO (letters and numbers; six characters)
     * The literal ``*`` **or** the literal ``-`` (optional)
     * Check digit (A number or the literal ``X``)
+
+    .. note:: When you are based in Germany, please see here for more general information and details on how to register an EMP identifier: `BDEW Codes`_.
 
 .. _glossary-cdr:
 
@@ -130,3 +134,4 @@ Partner Identifier
 .. _wikipedia ev:  https://en.wikipedia.org/wiki/Electric_vehicle
 .. _wikipedia charging station: https://en.wikipedia.org/wiki/Charging_station
 .. _iso 3166-1 alpha-2: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+.. _bdew codes: https://bdew-codes.de/Codenumbers/EMobilityId
