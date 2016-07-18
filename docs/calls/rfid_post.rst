@@ -21,7 +21,15 @@ Fields
 ~~~~~~
 
 rfids
-    An array of strings. Each string represents one UID.
+    An array of strings. Each string represents one RFID (UID).
+
+    .. important:: - An RFID must have a length of 8, 14 or 20 characters.
+                     If necessary, the RFID must be zero-padded on the left.
+
+                   - It should be read from left to right using big-endian format.
+
+                   - All characters must be upper-case.
+
 partner-identifier
     The partner identifier of the partner that shall be associated with these UIDs (string).
     See also :ref:`partner identifier <glossary-partner-identifier>`

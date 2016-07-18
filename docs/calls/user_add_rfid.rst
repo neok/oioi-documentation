@@ -36,7 +36,14 @@ user
         then token is used for authentication instead of a password.
 
 rfid
-    The RFID that identifies the charging key (string).
+    The RFID (UID) that identifies the charging key (string).
+
+    .. important:: - An RFID must have a length of 8, 14 or 20 characters.
+                     If necessary, the RFID must be zero-padded on the left.
+
+                   - It should be read from left to right using big-endian format.
+
+                   - All characters must be upper-case.
 
 Response
 --------
