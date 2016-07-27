@@ -56,7 +56,7 @@ Request::
 
     {
         "connector-post-status": {
-            "connector-id": "+49*8PS*E123456",
+            "connector-id": "DE*8PS*E123456",
             "partner-identifier": "123456-123456-abcdef-abc123-456def",
             "status": "Available"
         }

@@ -65,7 +65,7 @@ station
             string
 
     cpo-id
-        The EVSE identifier, e.g. ``+49*8PS``, of the CPO of the charging station (string).
+        The EVSE identifier, e.g. ``DE*8PS``, of the CPO of the charging station (string).
     is-open-24
         Whether or not the station is always accessible (24 hours per day) (boolean).
     connectors
@@ -213,16 +213,16 @@ Request::
                     "web": "www.example.com",
                     "email": "contact@example.com"
                 },
-                "cpo-id": "+49*8PS",
+                "cpo-id": "DE*8PS",
                 "is-open-24": false,
                 "connectors": [
                     {
-                        "id": "+49*8PS*E123456",
+                        "id": "DE*8PS*E123456",
                         "name": "Schuko",
                         "speed": 3.7
                     },
                     {
-                        "id": "+49*8PS*E123457",
+                        "id": "DE*8PS*E123457",
                         "name": "Type2",
                         "speed": 11.1
                     }
