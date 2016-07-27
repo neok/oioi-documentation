@@ -369,7 +369,7 @@ Response::
                         "name": "Schuko",
                         "speed": "3.7kW",
                         "mode": "Mode1",
-                        "external-id": "+49*123*1234567",
+                        "external-id": "DE*123*1234567",
                         "prices": null
                     }
                 ],
