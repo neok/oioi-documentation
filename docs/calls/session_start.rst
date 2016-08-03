@@ -76,6 +76,18 @@ Result codes
     Authentication failed: User token not valid
 181
     EVSE not found
+300
+    CPO error
+302
+    CPO timeout
+310
+    EVSE error
+312
+    EVSE timeout
+320
+    EVSE already in use
+321
+    No EV connected to EVSE
 
 Examples
 --------
