@@ -12,6 +12,13 @@ Station Post
 You have to send one request for each station.
 It is not possible to send multiple stations with one request.
 
+.. note:: To ensure very high data quality, PlugSurfing manually curates all charging station and connector data.
+          This means that data on the PlugSurfing platform may not correspond 100% to the data you push.
+
+          Furthermore, PlugSurfing groups stations to simplify access from clients like the PlugSurfing app.
+          As a result, multiple stations you push may show as a single station on the PlugSurfing platform,
+          with all connectors from all individual stations associated to the grouped station.
+
 Request
 -------
 
