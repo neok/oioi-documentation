@@ -16,8 +16,8 @@ The staging environment has two existing users that you can use for testing.
     - Has no payment method
     - Has no charging key
 
-UIDs
-~~~~
+UIDs to test RFID
+~~~~~~~~~~~~~~~~~
 The staging environment holds the following UIDs for testing.
 
 1. ``04523022AA4881``
