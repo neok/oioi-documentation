@@ -13,26 +13,7 @@ Request
 Fields
 ~~~~~~
 
-user
-    This field identifies the customer (object).
-
-    identifier-type
-        How to identify the user (string).
-
-        The identifier-type can be one of:
-
-        * ``"evco-id"``
-        * ``"rfid"``
-        * ``"username"``
-
-    identifier
-        The identifier is something that uniquely identifies the customer,
-        depending on the identifier-type (string).
-    token (optional)
-        A token can be used to authenticate the user (string).
-
-        For example: if the identifier type is username and the identifier is the user's username,
-        then token is used for authentication instead of a password.
+There are no request fields.
 
 Response
 --------
@@ -87,13 +68,7 @@ Examples
 Request::
 
     {
-        "vehicle-get-all": {
-            "user": {
-                "identifier-type": "username",
-                "identifier": "johndoe",
-                "token": "87d4e3085af04671834ebeb127df33bf"
-            }
-        }
+        "vehicle-get-all": {}
     }
 
 Response::
