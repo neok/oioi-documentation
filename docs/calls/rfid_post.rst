@@ -12,6 +12,12 @@ RFID Post
 
 .. note:: UIDs need to be all upper case.
 
+RFID Post acts like a complete whitelist of UIDs on every request.
+Every call has to include the complete list of RFIDs that shall be active.
+
+All RFIDs that were pushed before with the same ``"partner-identifier"`` and are not part of a request
+must be made invalid on the receiver side.
+
 Request
 -------
 
