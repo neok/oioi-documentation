@@ -71,12 +71,12 @@ filters
     operator-ids
         List of charging station operator ids (array of integers).
     payable
-        List of payment methods that should be available (array of strings).
+        List of service providers that should be available (array of strings).
 
-        Available are:
+        Examples are
 
-        * ``"app"``
-        * ``"rfid"``
+        * ``"PSA_EU"`` for PlugSurfing App payable
+        * ``"PSC_EU"`` for PlugSurfing Charging Key payable
 
 Response
 --------
