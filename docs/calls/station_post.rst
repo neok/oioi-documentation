@@ -172,7 +172,7 @@ station
     is-plugin-charge (optional)
         Whether or not a user can authorize with the proprietary "Plugin-Charge" method (boolean).
     is-roofed (optional)
-        boolean
+        Whether the station is under a roof, for example in a parking garage (boolean).
     is-private (optional)
         Whether the station is privately owned (boolean).
 
