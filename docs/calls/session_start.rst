@@ -89,3 +89,13 @@ Response::
             "success": true
         }
     }
+
+Stoppable response::
+
+    {
+        "session-start": {
+            "success": true,
+            "session-id": "abcdef-123456-abc123-456def",
+            "is-stoppable": true
+        }
+    }
