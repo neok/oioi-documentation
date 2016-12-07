@@ -170,7 +170,7 @@ station
     is-green-power-available (optional)
         boolean
     is-plugin-charge (optional)
-        boolean
+        Whether or not a user can authorize with the proprietary "Plugin-Charge" method (boolean).
     is-roofed (optional)
         boolean
     is-private (optional)
