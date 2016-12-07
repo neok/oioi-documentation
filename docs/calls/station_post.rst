@@ -256,7 +256,7 @@ Request::
                         ]
                     }
                 ],
-                "notes": false,
+                "notes": "Additional info.",
                 "is-reservable": false,
                 "floor-level": 1,
                 "is-free-charge": false,
