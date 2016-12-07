@@ -2,14 +2,19 @@
 
 .. _request-docs:
 
-Sending a Message to OIOI
-=========================
+Sending a Message via OIOI
+==========================
 
-To send a message, your server issues a POST request to::
+To send a message, issue a POST request to the server.
+In the example of PlugSurfing, that is::
 
     https://api.plugsurfing.com/api/v3/request
 
 .. note:: The staging server for testing is located at https://dev-api.plugsurfing.com/api/v3/request
+
+.. important:: All the concepts explained here apply also to any server instance that you may create.
+               If you expect any party to send requests to you using OIOI,
+               make sure your servers accept calls as described here.
 
 A message request is made of 2 parts: HTTP header and HTTP body.
 The HTTP header must contain the following headers::
