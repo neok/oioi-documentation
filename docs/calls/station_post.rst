@@ -210,7 +210,7 @@ Request::
                 "longitude": 2.345,
                 "address": {
                     "street": "streetname",
-                    "street-number": 123,
+                    "street-number": "123a",
                     "city": "Berlin",
                     "zip": "10243",
                     "country": "DE"
