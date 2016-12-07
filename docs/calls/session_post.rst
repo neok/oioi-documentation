@@ -95,7 +95,7 @@ Request::
                 "identifier-type": "rfid"
             },
             "session-id": "abcdef-123456-abc123-456def",
-            "connector-id": "DE*8PS*TABCDE*1",
+            "connector-id": "DE*8PS*ETABCD*1",
             "session-interval": {
                 "start": "2010-01-01T11:00:00+00:00",
                 "stop": "2010-01-01T17:00:00+00:00"
