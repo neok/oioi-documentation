@@ -113,3 +113,16 @@ Response::
             "message": "Success."
         }
     }
+
+Stoppable response::
+
+    {
+        "session-start": {
+            "session-id": "abcdef-123456-abc123-456def",
+            "is-stoppable": true
+        },
+        "result": {
+            "code": 0,
+            "message": "Success."
+        }
+    }
