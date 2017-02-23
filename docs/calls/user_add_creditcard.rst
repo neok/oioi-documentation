@@ -56,6 +56,8 @@ Status codes
    The token, username or identifier type were incorrect
 500 Internal Server Error
   Credit Card cannot be added
+805
+    This user is not allowed to use this method
 
 Examples
 --------
