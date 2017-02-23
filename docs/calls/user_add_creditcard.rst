@@ -61,6 +61,8 @@ Result codes
     Authentication failed: Email does not exist
 145
     Authentication failed: User token not valid
+805
+    This user is not allowed to use this method
 870
     Credit card error
 

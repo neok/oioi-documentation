@@ -65,6 +65,8 @@ Result codes
     Success
 800
     Payment system error
+805
+    This user is not allowed to use this method
 
 Examples
 --------
