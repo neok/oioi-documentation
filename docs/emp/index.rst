@@ -14,7 +14,7 @@ available in the EMP's network, the following steps need to be taken:
 
 Additional HTTP Header
 ----------------------
-For basic info, see :ref:`Sending a Message to OIOI <request-docs>`.
+For basic info, see :ref:`Sending a Message via OIOI <request-docs>`.
 
 Example HTTP request::
 

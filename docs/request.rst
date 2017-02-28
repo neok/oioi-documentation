@@ -2,8 +2,8 @@
 
 .. _request-docs:
 
-Sending a Message to OIOI
-=========================
+Sending a Message via OIOI
+==========================
 
 To send a message, your server issues a POST request to::
 
