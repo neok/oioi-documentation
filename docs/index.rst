@@ -57,7 +57,7 @@ The main documentation for the OIOI is organized into a couple of sections:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Connecting as Fleet Company
+   :caption: Connecting as Fleet Operator
 
    fleet/index
    fleet/cdr
