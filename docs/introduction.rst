@@ -1,3 +1,5 @@
+.. _introduction:
+
 Introduction
 ============
 To enhance the speed of onboarding :ref:`CPOs <glossary-cpo>` and :ref:`EMPs <glossary-emp>`,
