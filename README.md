@@ -1,4 +1,4 @@
-![OIOI Logo](https://www.plugsurfing.com/assets/img/icons/ps-oioi-logo-small.png)
+![OIOI Logo](http://docs.plugsurfing.com/en/latest/_images/ps-oioi-logo-small.png)
 ![Build Status](https://api.travis-ci.org/PlugSurfing/oioi-documentation.svg)
 
 # OIOI Documentation
