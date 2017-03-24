@@ -223,17 +223,6 @@ stations
                 The fee of charging energy at this connector, per kWh (string; format ``"1.23"``).
             currency
                 The currency of the prices (string; format ``"EUR"``).
-    prices (optional)
-        starting-fee
-            The fee of starting a session at this station (string; format ``"1.23"``).
-        charging-per-hour
-            The fee of charging energy at this station, per hour (string; format ``"1.23"``).
-        parking-per-hour
-            The fee of parking with a connection to this station, per hour (string; format ``"1.23"``).
-        charging-per-kwh
-            The fee of charging energy at this station, per kWh (string; format ``"1.23"``).
-        currency
-            The currency of the prices (string; format ``"EUR"``).
 companies
     An array of companies.
 
@@ -372,8 +361,7 @@ Response::
                         "external-id": "DE*123*1234567",
                         "prices": null
                     }
-                ],
-                "prices": null
+                ]
             },
             {
                 "id": 1169,
@@ -471,14 +459,7 @@ Response::
                             "currency": "EUR"
                         }
                     }
-                ],
-                "prices": {
-                    "starting-fee": "0.00",
-                    "charging-per-hour": "0.00",
-                    "parking-per-hour": "1.10",
-                    "charging-per-kwh": "0.36",
-                    "currency": "EUR"
-                }
+                ]
             },
             {
                 "id": 1770,
@@ -565,14 +546,7 @@ Response::
                             "currency": "EUR"
                         }
                     }
-                ],
-                "prices": {
-                    "starting-fee": "0.00",
-                    "charging-per-hour": "0.00",
-                    "parking-per-hour": "1.10",
-                    "charging-per-kwh": "0.36",
-                    "currency": "EUR"
-                }
+                ]
             },
             {
                 "id": 2057,
@@ -654,14 +628,7 @@ Response::
                             "currency": "EUR"
                         }
                     }
-                ],
-                "prices": {
-                    "starting-fee": "0.00",
-                    "charging-per-hour": "0.00",
-                    "parking-per-hour": "0.00",
-                    "charging-per-kwh": "0.00",
-                    "currency": "EUR"
-                }
+                ]
             }
         ],
         "companies": [
