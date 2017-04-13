@@ -38,6 +38,8 @@ Result codes
 ~~~~~~~~~~~~
 0
     Success
+183
+    Company not found
 
 Examples
 --------
