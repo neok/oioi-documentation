@@ -69,6 +69,15 @@ charging-interval (optional)
         The date/time format is RFC3339 (``Y-m-d\TH:i:sP``).
 energy-consumed (optional)
     The consumed energy in kWh (float).
+calculated-cost (optional)
+    The cost of the sesion (object).
+
+    amount
+        The cost amount (float).
+    currency
+        The currency of the cost (string).
+
+        E.g. ``"EUR"``.
 partner-identifier
     The partner identifier of the partner that shall be associated with this CDR.
     See also :ref:`partner identifier <glossary-partner-identifier>`
@@ -105,6 +114,10 @@ Request::
                 "stop": "2010-01-01T16:00:00+00:00"
             },
             "energy-consumed": 16.5,
+            "calculated-cost": {
+                "amount": 14.32,
+                "currency": "EUR"
+            },
             "partner-identifier": "123456-123456-abcdef-abc123-456def"
         }
     }
