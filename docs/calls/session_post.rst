@@ -70,7 +70,7 @@ charging-interval (optional)
 energy-consumed (optional)
     The consumed energy in kWh (float).
 calculated-cost (optional)
-    The cost of the sesion (object).
+    The cost of the session (object).
 
     amount
         The cost amount (float).
