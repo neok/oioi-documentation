@@ -43,13 +43,7 @@ HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
 200 OK
-  Request was processed successfully
-400 Invalid
-   Credit card cannot be added
-401 Unauthorized
-   The token, username or identifier type were incorrect
-500 Internal Server Error
-  Credit Card cannot be added
+    The request was processed successfully.
 
 Result codes
 ~~~~~~~~~~~~

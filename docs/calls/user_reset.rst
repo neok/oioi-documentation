@@ -24,9 +24,6 @@ HTTP Status codes
 
 200 OK
     The request was processed successfully.
-    The password of the user is reset and the user will receive an email with a link.
-404 Not Found
-    No user with the given username/email found.
 
 Result codes
 ~~~~~~~~~~~~

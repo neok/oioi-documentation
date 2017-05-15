@@ -50,12 +50,9 @@ Response
 
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
+
 200 OK
-  Successfull
-401 Unauthorized
-  The token, username or identifier type were incorrect
-404
-  The RFID for that user could not be found
+    The request was processed successfully.
 
 Result codes
 ~~~~~~~~~~~~

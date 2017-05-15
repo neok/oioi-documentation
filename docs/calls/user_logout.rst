@@ -42,9 +42,6 @@ HTTP Status codes
 
 200 OK
     The request was processed successfully.
-    The user is logged out.
-401 Unauthorized
-    The username does not exist or the username and password/token did not match.
 
 Result codes
 ~~~~~~~~~~~~

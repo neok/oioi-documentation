@@ -52,11 +52,7 @@ HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
 200 OK
-  Request was processed successfully
-401
-  User could not be authenticated
-409
-  RFID already exists for another user
+    The request was processed successfully.
 
 Result codes
 ~~~~~~~~~~~~

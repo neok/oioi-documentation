@@ -54,9 +54,7 @@ HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
 200 OK
-   The request was processed successfully.
-401 Unauthorized
-   The token, username or identifier type were incorrect.
+    The request was processed successfully.
 
 Result codes
 ~~~~~~~~~~~~

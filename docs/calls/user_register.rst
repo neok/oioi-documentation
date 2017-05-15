@@ -31,7 +31,7 @@ Fields
 
 token
     A token to authenticate the user in future requests (string).
-    
+
     Keep this token.
     When you make future requests where the user needs to be authenticated,
     you supply this token with the request.
@@ -44,10 +44,6 @@ HTTP Status codes
 
 200 OK
     The request was processed successfully.
-    The user now exists in the system.
-400 Bad Request
-    The user could not be registered.
-    This is due to the email or username already being taken.
 
 Result codes
 ~~~~~~~~~~~~

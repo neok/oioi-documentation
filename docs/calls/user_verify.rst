@@ -35,7 +35,7 @@ Fields
 
 token
     A token to authenticate the user in future requests (string).
-    
+
     Keep this token.
     When you make future requests where the user needs to be authenticated,
     you supply this token with the request.
@@ -45,9 +45,6 @@ HTTP Status codes
 
 200 OK
     The request was processed successfully.
-    The username and password/token are correct.
-401 Unauthorized
-   The username does not exist or the username and password/token did not match.
 
 Result codes
 ~~~~~~~~~~~~

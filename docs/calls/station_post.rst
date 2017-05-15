@@ -188,6 +188,12 @@ partner-identifier
 Response
 --------
 
+HTTP Status codes
+~~~~~~~~~~~~~~~~~
+
+200 OK
+    The request was processed successfully.
+
 Result codes
 ~~~~~~~~~~~~
 0

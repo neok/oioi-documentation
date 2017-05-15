@@ -36,12 +36,8 @@ Response
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
-200
-    All went well
-404
-    The connector or the status were not found
-422
-    The connector could not be identified uniquely
+200 OK
+    The request was processed successfully.
 
 Result codes
 ~~~~~~~~~~~~

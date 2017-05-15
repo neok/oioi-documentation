@@ -43,13 +43,7 @@ HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
 200 OK
-   Request was processed successfully
-400 Bad Request
-   Wrong EVCO ID format
-401 Unauthorized
-   The token, username or identifier type were incorrect
-500 Internal Server Error
-   Charging key cannot be activated
+    The request was processed successfully.
 
 Result codes
 ~~~~~~~~~~~~

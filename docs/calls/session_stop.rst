@@ -50,11 +50,7 @@ HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
 200 OK
-   Request was processed successfully
-401 Unauthorized
-   The token, username or identifier type were incorrect
-404 Not found
-   A connector could not be found by the supplied identifier
+    The request was processed successfully.
 
 Result codes
 ~~~~~~~~~~~~

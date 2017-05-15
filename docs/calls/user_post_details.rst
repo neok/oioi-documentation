@@ -108,12 +108,9 @@ reason
 
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
+
 200 OK
-   Request was processed successfully
-400 Invalid
-   If the country or VAT is invalid (reason is displayed in response)
-401 Unauthorized
-   The token, username or identifier type were incorrect
+    The request was processed successfully.
 
 Result codes
 ~~~~~~~~~~~~
