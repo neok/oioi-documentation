@@ -176,8 +176,9 @@ Response::
                 "name": "Marktparkhaus am Südwall",
                 "latitude": 51.516123,
                 "longitude": 6.322554,
-                "dynamic_status_summary": null,
-                "owner_type": null,
+                "dynamic-status-summary": null,
+                "owner-type": null,
+                "last-static-change": "2017-01-13T18:07:23+01:00",
                 "connector-statuses": {
                     "165946": "Available",
                     "165947": "Available"
@@ -188,8 +189,9 @@ Response::
                 "name": "Markt",
                 "latitude": 51.51599,
                 "longitude": 6.322551,
-                "dynamic_status_summary": null,
-                "owner_type": null,
+                "dynamic-status-summary": null,
+                "owner-type": null,
+                "last-static-change": "2017-01-13T18:07:23+01:00",
                 "connector-statuses": {
                     "142867": "Unknown"
                 }
