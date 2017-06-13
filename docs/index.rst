@@ -5,6 +5,9 @@ Welcome to OIOI's documentation!
 
 .. warning:: This is the latest version of the OIOI, **version 4.**
 
+             For other versions, e.g. **version 3**,
+             open the menu on the very bottom left of the screen.
+
              Even though this version is marked as ``stable``,
              new fields may be added to requests and responses.
 
