@@ -3,7 +3,7 @@ Welcome to OIOI's documentation!
 
 .. image:: images/ps-oioi-logo-small.png
 
-.. warning:: This is the latest version of the OIOI, **version 4.**
+.. warning:: This is the latest version of the OIOI, **master.**
              The latest version is still under development and not stable.
 
              For other versions, e.g. **stable**,
