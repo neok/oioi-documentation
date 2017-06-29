@@ -107,6 +107,9 @@ user
     evco-id
         The EVCO-ID of the Customer, can be null (string).
 
+    phone
+        The phone of the Customer, can be null (string).
+
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
@@ -163,7 +166,8 @@ Response::
             "locale": "de",
             "vat": "DE123456",
             "social-security-number": "SocialSecNumber",
-            "evco-id": "DE*8PS*156456730*9"
+            "evco-id": "DE*8PS*156456730*9",
+            "phone": "+49 151 84512991"
         },
         "result": {
             "code": 0,

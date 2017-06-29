@@ -98,6 +98,9 @@ user
 
                 Please use international two letter codes (ISO 3166-1 alpha-2).
 
+        phone
+            The phone of the Customer, can be null (string).
+
 Response
 --------
 
@@ -157,7 +160,8 @@ Request::
                     "zip": "10829",
                     "city": "Berlin",
                     "country": "DE"
-                }
+                },
+                "phone": "+49 151 84512991"
             }
         }
     }
