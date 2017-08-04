@@ -65,6 +65,11 @@ EMP
     Companies that provide :ref:`EV <glossary-ev>` drivers with access to charging stations.
     PlugSurfing, as interface between electric car drivers and CPOs, is an EMP.
 
+.. _glossary-roaming-platform:
+
+Roaming Platform
+    `PlugSurfing`_ is a roaming platform.
+
 .. _glossary-evco-id:
 
 EVCO ID
@@ -137,3 +142,4 @@ Partner Identifier
 .. _wikipedia charging station: https://en.wikipedia.org/wiki/Charging_station
 .. _iso 3166-1 alpha-2: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 .. _bdew codes: https://bdew-codes.de/Codenumbers/EMobilityId
+.. _plugsurfing: https://www.plugsurfing.com

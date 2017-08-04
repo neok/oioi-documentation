@@ -2,9 +2,9 @@
 
 Introduction
 ============
-To enhance the speed of onboarding :ref:`CPOs <glossary-cpo>` and :ref:`EMPs <glossary-emp>`,
+To enhance the speed of onboarding :ref:`CPOs <glossary-cpo>` and OEMs,
 PlugSurfing has created an open API: the OIOI.
-The OIOI covers all messages between a CPO and an EMP.
+The OIOI covers all messages between a CPO and an EMP or a :ref:`Roaming Platform <glossary-roaming-platform>` and an OEM.
 
 Business logic
 --------------

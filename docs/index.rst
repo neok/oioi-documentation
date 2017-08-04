@@ -13,7 +13,7 @@ The main documentation for the OIOI is organized into a couple of sections:
 
 * :ref:`introduction-docs`
 * :ref:`cpo-docs`
-* :ref:`emp-docs`
+* :ref:`oem-docs`
 * :ref:`fleet-docs`
 * :ref:`calls-docs`
 
@@ -40,18 +40,18 @@ The main documentation for the OIOI is organized into a couple of sections:
    cpo/remote_start
    cpo/rfid_start
 
-.. _emp-docs:
+.. _oem-docs:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Connecting as EMP
+   :caption: Connecting as OEM
 
-   emp/index
-   emp/user
-   emp/poi
-   emp/cdr
-   emp/remote_start
-   emp/rfid_start
+   oem/index
+   oem/user
+   oem/poi
+   oem/cdr
+   oem/remote_start
+   oem/rfid_start
 
 .. _fleet-docs:
 

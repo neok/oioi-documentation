@@ -1,16 +1,16 @@
 .. highlight:: none
 
-Introduction for EMPs
+Introduction for OEMs
 =====================
 
-In order for an EMP to connect to a CPO and make their charging stations
-available in the EMP's network, the following steps need to be taken:
+In order for an OEM to connect to a :ref:`Roaming Platform <glossary-roaming-platform>` and make their charging stations
+available in the OEM's network, the following steps need to be taken:
 
-* :ref:`emp-user-docs`
-* :ref:`emp-poi-docs`
-* :ref:`emp-cdr-docs`
-* :ref:`emp-remote-start-docs`
-* :ref:`emp-rfid-start-docs`
+* :ref:`oem-user-docs`
+* :ref:`oem-poi-docs`
+* :ref:`oem-cdr-docs`
+* :ref:`oem-remote-start-docs`
+* :ref:`oem-rfid-start-docs`
 
 Additional HTTP Header
 ----------------------
