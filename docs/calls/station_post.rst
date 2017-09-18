@@ -27,6 +27,9 @@ Request
 Fields
 ~~~~~~
 
+.. note:: PlugSurfing uses the station's operator's name to display a name of a charging station in the mobile app or on the web.
+          In case an operator name is missing, PlugSurfing displays the station name instead.
+
 station
     An object that holds the station data. Fields of a station are:
 
