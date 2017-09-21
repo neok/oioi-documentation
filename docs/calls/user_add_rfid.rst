@@ -38,7 +38,9 @@ user
 rfid
     The RFID (UID) that identifies the charging key (string).
 
-    .. important:: - An RFID must have a length of 8, 14 or 20 characters.
+    .. important:: - The format must be a hexadecimal string.
+
+                   - An RFID must have a length of 8, 14 or 20 characters.
                      If necessary, the RFID must be zero-padded on the left.
 
                    - It should be read from left to right using big-endian format.
