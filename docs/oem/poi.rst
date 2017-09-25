@@ -2,7 +2,7 @@
 
 Receiving POIs
 ==============
-As an OEM, you can connect to a :ref:`Roaming Platform <glossary-roaming-platform>` to display their POI data and allow your customers to charge at the Roaming Platform's charging stations.
+As an OEM, you can connect to a :ref:`Roaming Platform <glossary-roaming-platform>` like PlugSurfing to display their POI data and allow your customers to charge at the Roaming Platform's charging stations.
 For example to display charging stations on an app's map.
 
 .. note:: For OEMs, OIOI does not offer a full download of all available data.
