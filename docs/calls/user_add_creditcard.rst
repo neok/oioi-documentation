@@ -36,6 +36,10 @@ user
 encrypted-data
     Encrypted credit card data (string)
 
+    .. note:: PlugSurfing does not handle any credit card data.
+              The data must be encrypted client side before it is sent so that PlugSurfing cannot access this data.
+              If you need details on how to encrypt the data or the public key to do so, please contact PlugSurfing.
+
 Response
 --------
 

@@ -59,3 +59,15 @@ This call allows a user to do so.
 * **Implementation:** :ref:`calls-userblockrfid-docs`
 
 .. note:: It may take up to 24h until the block has propagated throughout all networks.
+
+.. _oem-user-paymentmethods-docs:
+
+User Payment Methods
+--------------------
+There are two distinct calls to add a payment method for a user.
+One is to add a credit card, where the credit card deata is encrypted on the client side before it is transferred to the server.
+The other is for, for example, PayPal, where the server returns a URL that the client must open and present to the user.
+
+* **Role:** Sender
+* **Implementation:** :ref:`calls-useraddcreditcard-docs`
+* **Implementation:** :ref:`calls-useraddpayment-docs`

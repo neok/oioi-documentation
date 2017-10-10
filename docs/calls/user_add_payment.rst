@@ -5,6 +5,11 @@
 User Add Payment
 ================
 
+This call will return a URL that the frontend must use to load and show a webview.
+The frontend should monitor the activity in the webview to determine success or failure of the operation.
+For PlugSurfing the return URL wil be ``https://my.plugsurfing.com/profile/bankAccountAdded/oioi``.
+If you need more info, please contact PlugSurfing directly.
+
 Request
 -------
 
@@ -51,7 +56,7 @@ Fields
 ~~~~~~
 
 url
-   The JSON and UTF encoded URL for the request (string)
+   The UTF encoded URL for the request (string)
 
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
