@@ -92,9 +92,6 @@ Possible HTTP response codes and their meanings:
 OIOI Response Codes
 ~~~~~~~~~~~~~~~~~~~
 
-.. note:: OIOI Error codes are not part of the OIOI response, yet.
-          These codes will be added to the OIOI shortly.
-
 A more general code must always be accepted in parellel to the more
 specific code.
 For example: If a customer successfully starts a charging session,
