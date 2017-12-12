@@ -14,6 +14,8 @@ For other versions, open the menu on the very bottom left of the screen.
 
              Requests will only get additional fields if they are optional.
 
+.. important :: This specific release is |release|.
+
 The main documentation for the OIOI is organized into a couple of sections:
 
 * :ref:`introduction-docs`
