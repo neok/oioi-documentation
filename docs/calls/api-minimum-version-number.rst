@@ -3,7 +3,7 @@
 .. _calls-apiminimumversionnumber-docs:
 
 API minimum version number
-===========
+==========================
 
 .. warning:: You have to update the client if you are not using at least the API version returned by this call and you should not let the user interact with the API.
 
