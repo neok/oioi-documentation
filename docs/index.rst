@@ -16,6 +16,8 @@ Welcome to OIOI's documentation!
 
              Requests will only get additional fields if they are optional.
 
+.. important :: This specific release is |release|.
+
 The main documentation for the OIOI is organized into a couple of sections:
 
 * :ref:`introduction-docs`
