@@ -18,6 +18,28 @@ Define a rectangle on a map by providing two corners:
 Fields
 ~~~~~~
 
+user (optional)
+    This field identifies the customer (object).
+
+    identifier-type
+        How to identify the user (string).
+
+        The identifier-type can be one of:
+
+        * ``"evco-id"``
+        * ``"rfid"``
+        * ``"username"``
+
+    identifier
+        The identifier is something that uniquely identifies the customer,
+        depending on the identifier-type (string).
+
+    token (optional)
+        A token can be used to authenticate the user (string).
+
+        For example: if the identifier type is username and the identifier is the user's username,
+        then token is used for authentication instead of a password.
+
 min-lat
     Minimum latitude of the area you are querying (float).
 max-lat
@@ -167,6 +189,40 @@ Request::
         }
     }
 
+    {
+        "station-get-surface": {
+            "user": {
+                "identifier-type": "username",
+                "identifier": "john",
+                "token": "b3853b6d910849f3b4392555b8acb984"
+            },
+            "min-lat": 0,
+            "max-lat": 45,
+            "min-long": 30,
+            "max-long": 40,
+            "filters": {
+                "excludes": [
+                    11131
+                ],
+                "company-types": [
+                    "hotel"
+                ],
+                "connector-types": [
+                    "Type2"
+                ],
+                "connector-speeds-greater": 3,
+                "connector-speeds-less": 100,
+                "operator-ids": [
+                    122,
+                    32
+                ],
+                "payable": [
+                    "app",
+                    "rfid"
+                ]
+            }
+        }
+    }
 Response::
 
     {
