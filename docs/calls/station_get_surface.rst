@@ -29,6 +29,7 @@ user (optional)
         * ``"evco-id"``
         * ``"rfid"``
         * ``"username"``
+        * ``"token"``
 
     identifier
         The identifier is something that uniquely identifies the customer,

@@ -24,6 +24,7 @@ user
         * ``"evco-id"``
         * ``"rfid"``
         * ``"username"``
+        * ``"token"``
 
         .. warning:: For a session start request,
                      it is usually required that the ``"identifier-type"`` **must** be ``"evco-id"``.
