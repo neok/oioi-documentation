@@ -246,6 +246,13 @@ stations
                 The fee of charging energy at this connector, per kWh (string; format ``"1.23"``).
             currency
                 The currency of the prices (string; format ``"EUR"``).
+        reservation (optional)
+            Active reservation for this connector (object).
+
+            end
+                When this reservation ends (string; format RFC3339 ``"2016-05-09T04:08:06+02:00"``)
+            own
+                If reservation by the user included in User request object. If request object isn't set this will default to false. (boolean)
 companies
     An array of companies.
 
@@ -398,7 +405,11 @@ Response::
                         "speed": "3.7kW",
                         "mode": "Mode1",
                         "external-id": "DE*123*1234567",
-                        "prices": null
+                        "prices": null,
+                        "reservation": {
+                            "end": "2016-07-01T15:24:28+02:00",
+                            "own": false
+                        }
                     }
                 ]
             },

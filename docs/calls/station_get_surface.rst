@@ -144,6 +144,15 @@ stations
     connector-statuses
         Array of connectors' statuses (id (string): status (string)).
 
+    connector-reservations (optional)
+        Array of connectors' reservations (id (string): reservation (object)).
+
+            reservation
+                end
+                    When this reservation ends (string; format RFC3339 ``"2016-05-09T04:08:06+02:00"``)
+                own
+                    If reservation by the user included in User request object. If request object isn't set this will default to false. (boolean)
+
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
@@ -252,6 +261,12 @@ Response::
                 "last-static-change": "2017-01-13T18:07:23+01:00",
                 "connector-statuses": {
                     "142867": "Unknown"
+                },
+                "connector-reservations": {
+                    "142867": {
+                        "end": "2017-01-14T12:37:11+01:00",
+                        "own": false
+                    }
                 }
             }
         ],
