@@ -107,6 +107,9 @@ Response
 Fields
 ~~~~~~
 
+hasMore
+    Value indicating are there more stations within provided coordinates satisfying provided filters (boolean).
+
 
 stations
     An array of charging stations (objects).
@@ -270,8 +273,10 @@ Response::
                 }
             }
         ],
+        "hasMore": false,
         "result": {
             "code": 0,
             "message": "Success."
         }
     }
+
