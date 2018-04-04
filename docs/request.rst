@@ -28,11 +28,16 @@ Example HTTP request::
     Authorization: key=a39ff3fb-fe0a-40a3-bdde-df6372c07c89
 
     {
-        "station-get-by-center-radius": {
-            "center-lat": 52.5167,
-            "center-long": 13.3833,
-            "radius": 100,
-            "unit": "km"
+        "station-get-surface": {
+            "min-lat": 52.432176705429576,
+            "max-lat": 52.58701292004462,
+            "min-long": 13.212544385009778,
+            "max-long": 13.540417614990247,
+            "filters": {
+                "excludes":[],
+                "connector-speeds-greater": 0,
+                "payable": ["app","rfid"]
+            }
         }
     }
 
