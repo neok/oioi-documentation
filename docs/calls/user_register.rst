@@ -19,9 +19,11 @@ email
     The email of the new user (string).
 password
     The plain password of the new user (string).
-language
+language (optional)
     The locale of the new user (string).
     Expected is a lowercase, two-character string in accordance with `ISO 639-1:2002`_.
+receive-newsletters (optional)
+    Whether or not a user is subscribed to plugsurfing newsletters (boolean).
 
 Response
 --------
@@ -62,7 +64,8 @@ Request::
             "username": "user",
             "email": "name@mail.com",
             "password": "plain-password",
-            "language": "en"
+            "language": "en",
+            "receive-newsletters": true
         }
     }
 
