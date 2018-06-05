@@ -138,6 +138,16 @@ Partner Identifier
     At the same time, multiple API keys can use the same partner identifier to act
     on behalf of that entity.
 
+.. _glossary-oem:
+
+OEM
+    An Original Equipment Manufacturer (OEM) is a company that produces parts and equipment that may be marketed by another manufacturer.
+
+    .. note:: In our environment OEM is always a car manufacturer. For example BMW or Volkswagen.
+
+    See also `Wikipedia OEM`_
+
+.. _wikipedia oem: https://en.wikipedia.org/wiki/Original_equipment_manufacturer
 .. _wikipedia ev:  https://en.wikipedia.org/wiki/Electric_vehicle
 .. _wikipedia charging station: https://en.wikipedia.org/wiki/Charging_station
 .. _iso 3166-1 alpha-2: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
