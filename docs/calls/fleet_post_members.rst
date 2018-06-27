@@ -1,6 +1,6 @@
 .. highlight:: js
 
-.. _calls-fleetpostmember-docs:
+.. _calls-fleetpostmembers-docs:
 
 Fleet Post Member
 =================
@@ -8,12 +8,14 @@ Fleet Post Member
 Request
 -------
 
-``"fleet-post-member"`` identifies the call as fleet-post-member call.
+``"fleet-post-members"`` identifies the call as fleet-post-members call.
 
 Fields
 ~~~~~~
 
-member-info
+members
+    An array of fleet members (array of objects).
+
     fleet-member-uid
         Id of fleet member provided by Fleet. This shall not be changed by MSP (integer).
 
@@ -145,49 +147,51 @@ Examples
 Request::
 
     {
-        "fleet-post-member": {
-            "member-info": {
-                "fleet-member-uid": 1234,
-                "external-id": "Member 1234",
-                "address": {
-                    "address-line-1": "Torgauer Str.",
-                    "address-line-2": "12 - 15",
-                    "postal-code": "10829",
-                    "city": "Berlin",
-                    "state-province": "Berlin",
-                    "country": "DE"
-                },
-                "contact": {
-                    "first-name": "Jack",
-                    "last-name": "Daniels",
-                    "title": "Mr.",
-                    "job-title": "CEO",
-                    "phone": "+4915184512991"
-                    "email": "jack@daniels.com"
-                },
-                "default-language": "en",
-                "fleet-id": "Fleet 1",
-                "fleet-name": "Allego Fleet 1",
-                "fleet-cpo-id": "NLALL",
-                "fleet-reference-id": "ref123",
-                "evses": [
-                    {
-                        "fm-evse-uid": 12345,
-                        "evse-id": "NL*ALL*E0008A3",
-                        "reimbursement-fee": [
-                            {
-                                "date-start": "2014-06-23T18:32:49+02:00",
-                                "date-end": "2014-06-23T18:32:49+02:00",
-                                "allow-reimbursement": true,
-                                "reimbursement-iban": "DE89370400440532013000",
-                                "reimbursement-full-name": "Jack Daniels",
-                                "kwh-reimbursement": 10.0,
-                                "reimbursement-currency": "EUR"
-                            }
-                        ]
-                    }
-                ]
-            }
+        "fleet-post-members": {
+            "members": [
+                {
+                    "fleet-member-uid": 1234,
+                    "external-id": "Member 1234",
+                    "address": {
+                        "address-line-1": "Torgauer Str.",
+                        "address-line-2": "12 - 15",
+                        "postal-code": "10829",
+                        "city": "Berlin",
+                        "state-province": "Berlin",
+                        "country": "DE"
+                    },
+                    "contact": {
+                        "first-name": "Jack",
+                        "last-name": "Daniels",
+                        "title": "Mr.",
+                        "job-title": "CEO",
+                        "phone": "+4915184512991"
+                        "email": "jack@daniels.com"
+                    },
+                    "default-language": "en",
+                    "fleet-id": "Fleet 1",
+                    "fleet-name": "Allego Fleet 1",
+                    "fleet-cpo-id": "NLALL",
+                    "fleet-reference-id": "ref123",
+                    "evses": [
+                        {
+                            "fm-evse-uid": 12345,
+                            "evse-id": "NL*ALL*E0008A3",
+                            "reimbursement-fee": [
+                                {
+                                    "date-start": "2014-06-23T18:32:49+02:00",
+                                    "date-end": "2014-06-23T18:32:49+02:00",
+                                    "allow-reimbursement": true,
+                                    "reimbursement-iban": "DE89370400440532013000",
+                                    "reimbursement-full-name": "Jack Daniels",
+                                    "kwh-reimbursement": 10.0,
+                                    "reimbursement-currency": "EUR"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     }
 
