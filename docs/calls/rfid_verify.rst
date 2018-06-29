@@ -36,7 +36,7 @@ Fields
 ~~~~~~
 
 evco-id
-    EVCO ID of the RFID is returned in case of 0 result code (string)
+    EVCO ID of the RFID is returned in case of response with 0 result code (string)
 
 HTTP Status code
 ~~~~~~~~~~~~~~~~
