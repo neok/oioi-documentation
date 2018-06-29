@@ -32,6 +32,11 @@ rfid
 
 Response
 --------
+Fields
+~~~~~~
+
+evco-id
+    EVCO ID of the RFID is returned in case of 0 result code (string)
 
 HTTP Status code
 ~~~~~~~~~~~~~~~~
@@ -65,6 +70,7 @@ Request::
 Response::
 
     {
+        "evco-id": "DE*8PS*D89761*2",
         "result": {
             "code": 0,
             "message": "Success."
