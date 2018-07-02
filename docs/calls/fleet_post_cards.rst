@@ -34,9 +34,9 @@ fleet-cards
     array of fleet card objects
 
     fm-card-uid
-        Fleet card unique identifier. Provided by CPO. (string)
+        Fleet card unique identifier. Provided by CPO. (int)
     fleet-member-uid
-        Fleet Member unique identifier. Provided by CPO. (string)
+        Fleet Member unique identifier. Provided by CPO. (int)
     evco-id (optional)
         EVCO ID of this card. Provided by EMP. (string; length 20)
     rfid (optional)
@@ -84,15 +84,15 @@ Request::
         "fleet-post-cards": {
             "fleet-cards": [
                 {
-                    "fm-card-uid": "23",
-                    "fleet-member-uid": "35",
+                    "fm-card-uid": 23,
+                    "fleet-member-uid": 35,
                     "card-status": "NEW_REQUEST",
                     "requested-date": "2018-01-01T10:00:00+00:00"
 
                 },
                 {
-                    "fm-card-uid": "25",
-                    "fleet-member-uid": "31",
+                    "fm-card-uid": 25,
+                    "fleet-member-uid": 31,
                     "card-status": "EVCO_REQUEST",
                     "requested-date": "2018-01-01T10:00:00+00:00",
                     "rfid": "00001111",
