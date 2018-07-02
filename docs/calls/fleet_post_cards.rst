@@ -38,13 +38,13 @@ fleet-cards
     fleet-member-uid
         Fleet Member unique identifier. Provided by CPO. (string)
     evco-id (optional)
-        EVCO ID of this card. Provided by EMP. (string)
+        EVCO ID of this card. Provided by EMP. (string; length 20)
     rfid (optional)
-        RFID code of the card. If this is EVCO_REQUEST this field is required and provided by CPO, if not it will be provided by EMP on after card is issued. (string)
+        RFID code of the card. If this is EVCO_REQUEST this field is required and provided by CPO, if not it will be provided by EMP on after card is issued. (string; length 20)
     visual-id (optional)
-        Visual ID printed on the card. In case of 3rd party issuer, this is optionally provided by CPO. (string)
+        Visual ID printed on the card. In case of 3rd party issuer, this is optionally provided by CPO. (string; length 64)
     issuer (optional)
-        MSP code of the party that issued the card. This is used for EVCO_REQUEST when issuer is 3rd party. Provided by CPO. (string)
+        MSP code of the party that issued the card. This is used for EVCO_REQUEST when issuer is 3rd party. Provided by CPO. (string; length 5)
     card-status
         One of the possible ``"NEW_REQUEST", "EVCO_REQUEST", "REQUEST_RECEIVED", "REQUEST_ACCEPTED", "REQUEST_REJECTED", "OPERATIONAL", "REQUEST_TO_BLOCK", "REQUEST_TO_UNBLOCK", "BLOCKED"`` (string)
     request-date (optional)
