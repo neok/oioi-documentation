@@ -12,6 +12,9 @@ Request
 
 Fields
 ~~~~~~
+partner-identifier
+    The partner identifier of the owner of this fleet. (string)
+    See also :ref:`partner identifier <glossary-partner-identifier>`
 
 members
     An array of fleet members (array of objects).
