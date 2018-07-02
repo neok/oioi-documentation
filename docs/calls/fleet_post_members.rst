@@ -165,7 +165,7 @@ Request::
                         "last-name": "Daniels",
                         "title": "Mr.",
                         "job-title": "CEO",
-                        "phone": "+4915184512991"
+                        "phone": "+4915184512991",
                         "email": "jack@daniels.com"
                     },
                     "default-language": "en",
