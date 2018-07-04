@@ -1,14 +1,14 @@
 .. highlight:: js
 
-.. _calls-sessionstop-docs:
+.. _calls-userchargingkeydeactivate-docs:
 
-Session Stop
-============
+User Charging Key Deactivate
+============================
 
 Request
 -------
 
-``"session-stop"`` identifies the call as a session-stop call.
+``"user-charging-key-deactivate"`` identifies the call as a user-charging-key-deactivate call.
 
 Fields
 ~~~~~~
@@ -26,9 +26,6 @@ user
         * ``"username"``
         * ``"token"``
 
-        .. warning:: For a session stop request,
-                     it is usually required that the ``"identifier-type"`` **must** be ``"evco-id"``.
-
     identifier
         The identifier is something that uniquely identifies the customer,
         depending on the identifier-type (string).
@@ -37,12 +34,8 @@ user
 
         For example: if the identifier type is username and the identifier is the user's username,
         then token is used for authentication instead of a password.
-connector-id
-   The EVSE ID that identifies the connector where the session should be stopped (string).
-session-id (optional)
-   A unique ID that identifies this session (string).
-
-   .. warning:: Depending on the CPO's requirements, a ``session-id`` may be mandatory.
+evco-id
+   The EVCO ID that identifies the charging key (string).
 
 Response
 --------
@@ -63,8 +56,8 @@ Result codes
     Authentication failed: Email does not exist
 145
     Authentication failed: User token not valid
-181
-    EVSE not found
+190
+    EVCO ID error
 
 Examples
 --------
@@ -72,13 +65,13 @@ Examples
 Request::
 
     {
-        "session-stop": {
+        "user-charging-key-deactivate": {
             "user": {
-                "identifier-type": "evco-id",
-                "identifier": "DE*8PS*123456*7"
+                "identifier-type": "username",
+                "identifier": "youridentifier",
+                "token": "yourtoken"
             },
-            "connector-id": "1356",
-            "session-id": "dfdf"
+            "evco-id": "yourevcoid"
         }
     }
 

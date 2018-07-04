@@ -18,6 +18,29 @@ Define a rectangle on a map by providing two corners:
 Fields
 ~~~~~~
 
+user (optional)
+    This field identifies the customer (object).
+
+    identifier-type
+        How to identify the user (string).
+
+        The identifier-type can be one of:
+
+        * ``"evco-id"``
+        * ``"rfid"``
+        * ``"username"``
+        * ``"token"``
+
+    identifier
+        The identifier is something that uniquely identifies the customer,
+        depending on the identifier-type (string).
+
+    token (optional)
+        A token can be used to authenticate the user (string).
+
+        For example: if the identifier type is username and the identifier is the user's username,
+        then token is used for authentication instead of a password.
+
 min-lat
     Minimum latitude of the area you are querying (float).
 max-lat
@@ -84,6 +107,9 @@ Response
 Fields
 ~~~~~~
 
+hasMore
+    Value indicating are there more stations within provided coordinates satisfying provided filters (boolean).
+
 
 stations
     An array of charging stations (objects).
@@ -121,6 +147,15 @@ stations
     connector-statuses
         Array of connectors' statuses (id (string): status (string)).
 
+    connector-reservations (optional)
+        Array of connectors' reservations (id (string): reservation (object)).
+
+            reservation
+                end
+                    When this reservation ends (string; format RFC3339 ``"2016-05-09T04:08:06+02:00"``)
+                own
+                    If reservation by the user included in User request object. If request object isn't set this will default to false. (boolean)
+
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
@@ -139,6 +174,41 @@ Request::
 
     {
         "station-get-surface": {
+            "min-lat": 0,
+            "max-lat": 45,
+            "min-long": 30,
+            "max-long": 40,
+            "filters": {
+                "excludes": [
+                    11131
+                ],
+                "company-types": [
+                    "hotel"
+                ],
+                "connector-types": [
+                    "Type2"
+                ],
+                "connector-speeds-greater": 3,
+                "connector-speeds-less": 100,
+                "operator-ids": [
+                    122,
+                    32
+                ],
+                "payable": [
+                    "app",
+                    "rfid"
+                ]
+            }
+        }
+    }
+
+    {
+        "station-get-surface": {
+            "user": {
+                "identifier-type": "username",
+                "identifier": "john",
+                "token": "b3853b6d910849f3b4392555b8acb984"
+            },
             "min-lat": 0,
             "max-lat": 45,
             "min-long": 30,
@@ -194,11 +264,19 @@ Response::
                 "last-static-change": "2017-01-13T18:07:23+01:00",
                 "connector-statuses": {
                     "142867": "Unknown"
+                },
+                "connector-reservations": {
+                    "142867": {
+                        "end": "2017-01-14T12:37:11+01:00",
+                        "own": false
+                    }
                 }
             }
         ],
+        "hasMore": false,
         "result": {
             "code": 0,
             "message": "Success."
         }
     }
+

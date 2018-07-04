@@ -48,6 +48,7 @@ The main documentation for the OIOI is organized into a couple of sections:
    cpo/cdr
    cpo/remote_start
    cpo/rfid_start
+   cpo/reservation
 
 .. _oem-docs:
 
@@ -61,6 +62,7 @@ The main documentation for the OIOI is organized into a couple of sections:
    oem/cdr
    oem/remote_start
    oem/rfid_start
+   oem/reservation
 
 .. _fleet-docs:
 

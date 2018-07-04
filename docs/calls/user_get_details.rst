@@ -24,6 +24,7 @@ user
         * ``"evco-id"``
         * ``"rfid"``
         * ``"username"``
+        * ``"token"``
 
     identifier
         The identifier is something that uniquely identifies the customer,
@@ -110,6 +111,9 @@ user
     phone
         The phone of the Customer, can be null (string).
 
+    company-name
+        Company name of the Customer, can be null (string).
+
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
 
@@ -167,7 +171,8 @@ Response::
             "vat": "DE123456",
             "social-security-number": "SocialSecNumber",
             "evco-id": "DE*8PS*156456730*9",
-            "phone": "+49 151 84512991"
+            "phone": "+49 151 84512991",
+            "company-name": "PlugSurfing GmbH"
         },
         "result": {
             "code": 0,

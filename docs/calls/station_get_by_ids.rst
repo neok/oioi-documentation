@@ -13,6 +13,29 @@ Request
 Fields
 ~~~~~~
 
+user (optional)
+    This field identifies the customer (object).
+
+    identifier-type
+        How to identify the user (string).
+
+        The identifier-type can be one of:
+
+        * ``"evco-id"``
+        * ``"rfid"``
+        * ``"username"``
+        * ``"token"``
+
+    identifier
+        The identifier is something that uniquely identifies the customer,
+        depending on the identifier-type (string).
+
+    token (optional)
+        A token can be used to authenticate the user (string).
+
+        For example: if the identifier type is username and the identifier is the user's username,
+        then token is used for authentication instead of a password.
+
 station-ids
     An array of IDs (integers).
 
@@ -223,6 +246,13 @@ stations
                 The fee of charging energy at this connector, per kWh (string; format ``"1.23"``).
             currency
                 The currency of the prices (string; format ``"EUR"``).
+        reservation (optional)
+            Active reservation for this connector (object).
+
+            end
+                When this reservation ends (string; format RFC3339 ``"2016-05-09T04:08:06+02:00"``)
+            own
+                If reservation by the user included in User request object. If request object isn't set this will default to false. (boolean)
 companies
     An array of companies.
 
@@ -286,6 +316,22 @@ Request::
 
     {
         "station-get-by-ids": {
+            "station-ids": [
+                1770,
+                1169,
+                1003,
+                2057
+            ]
+        }
+    }
+
+    {
+        "station-get-by-ids": {
+            "user": {
+                "identifier-type": "username",
+                "identifier": "john",
+                "token": "b3853b6d910849f3b4392555b8acb984"
+            },
             "station-ids": [
                 1770,
                 1169,
@@ -359,7 +405,11 @@ Response::
                         "speed": "3.7kW",
                         "mode": "Mode1",
                         "external-id": "DE*123*1234567",
-                        "prices": null
+                        "prices": null,
+                        "reservation": {
+                            "end": "2016-07-01T15:24:28+02:00",
+                            "own": false
+                        }
                     }
                 ]
             },

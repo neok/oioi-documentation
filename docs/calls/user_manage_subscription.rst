@@ -1,14 +1,22 @@
 .. highlight:: js
 
-.. _calls-userblockrfid-docs:
+.. _calls-usermanagesubscription-docs:
 
-User Block RFID
-===============
+User Manage Subscription
+========================
+
+With this request user can subscribe to one of available subscription plans or cancel already active subscription.
+
+.. warning:: Cancelling user's active subscription means that subscription will not be renewed on the end of expiration
+            date. Cancelled subscription will still be ACTIVE till the end of expiration date which is set based on subscription's
+            plan duration (usually 6 or 12 months at minimum).
+
+.. warning:: One user can only have one active subscription at the time.
 
 Request
 -------
 
-``"user-block-rfid"`` identifies the call as a user-block-rfid call.
+``"user-manage-subscription"`` identifies the call as a user-manage-subscription call.
 
 Fields
 ~~~~~~
@@ -36,15 +44,12 @@ user
         For example: if the identifier type is username and the identifier is the user's username,
         then token is used for authentication instead of a password.
 
-rfid
-    The RFID (UID) of the user that should be blocked (string).
+id
+    ID of Subscription Plan for which we want to start/cancel subscription (int).
 
-    .. important:: - An RFID must have a length of 8, 14 or 20 characters.
-                     If necessary, the RFID must be zero-padded on the left.
+cancel (optional)
+    `false` or omitted if we want to subscribe. `true` if we want to cancel subscription (bool).
 
-                   - It should be read from left to right using big-endian format.
-
-                   - All characters must be upper-case.
 
 Response
 --------
@@ -59,16 +64,20 @@ Result codes
 ~~~~~~~~~~~~
 0
     Success
+100
+    System error.
 140
     Authentication failed: No positive authentication response
 144
     Authentication failed: Email does not exist
 145
     Authentication failed: User token not valid
-190
-    EVCO ID error
-191
-    EVCO ID not found
+180
+    Entity not found.
+185
+    Subscription plan not found.
+195
+    User has already active rating subscription.
 
 Examples
 --------
@@ -76,21 +85,22 @@ Examples
 Request::
 
     {
-        "user-block-rfid": {
+        "user-manage-subscription": {
             "user": {
                 "identifier-type": "username",
-                "identifier": "john",
+                "identifier": "some_user",
                 "token": "b3853b6d910849f3b4392555b8acb984"
             },
-            "rfid": "12345678ABCDEF"
+            "id": 1,
+            "cancel": false
         }
     }
 
 Response::
 
     {
-        "result": {
-            "code": 0,
-            "message": "Success."
-        }
+      "result": {
+        "code": 0,
+        "message": "Success."
+      }
     }

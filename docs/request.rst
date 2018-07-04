@@ -28,11 +28,16 @@ Example HTTP request::
     Authorization: key=a39ff3fb-fe0a-40a3-bdde-df6372c07c89
 
     {
-        "station-get-by-center-radius": {
-            "center-lat": 52.5167,
-            "center-long": 13.3833,
-            "radius": 100,
-            "unit": "km"
+        "station-get-surface": {
+            "min-lat": 52.432176705429576,
+            "max-lat": 52.58701292004462,
+            "min-long": 13.212544385009778,
+            "max-long": 13.540417614990247,
+            "filters": {
+                "excludes":[],
+                "connector-speeds-greater": 0,
+                "payable": ["app","rfid"]
+            }
         }
     }
 
@@ -105,7 +110,7 @@ a ``100`` could also be returned and must be accepted by the client.
 +============+============================================================+
 | ``0xx``    | **Success**                                                |
 +------------+------------------------------------------------------------+
-| ``000``    | Succes                                                     |
+| ``000``    | Success                                                    |
 +------------+------------------------------------------------------------+
 | ``011``    | Successfully started a charging session                    |
 |            |                                                            |
@@ -153,6 +158,8 @@ a ``100`` could also be returned and must be accepted by the client.
 +------------+------------------------------------------------------------+
 | ``188``    | EVSE ID does not support remote stop                       |
 +------------+------------------------------------------------------------+
+| ``189``    | Reservation not found                                      |
++------------+------------------------------------------------------------+
 | ``190``    | EVCO ID error                                              |
 +------------+------------------------------------------------------------+
 | ``191``    | EVCO ID not found                                          |
@@ -160,6 +167,10 @@ a ``100`` could also be returned and must be accepted by the client.
 | ``192``    | EVCO ID locked                                             |
 +------------+------------------------------------------------------------+
 | ``193``    | EVCO ID has no valid payment method                        |
++------------+------------------------------------------------------------+
+| ``194``    | EVCO ID has another active reservation                     |
++------------+------------------------------------------------------------+
+| ``195``    | User has already active rating subscription                |
 +------------+------------------------------------------------------------+
 | ``2xx``    | **Client Error**                                           |
 +------------+------------------------------------------------------------+
@@ -189,6 +200,10 @@ a ``100`` could also be returned and must be accepted by the client.
 +------------+------------------------------------------------------------+
 | ``322``    | Connector with the same EVSE ID, but with different        |
 |            | latitude/longitude exists                                  |
++------------+------------------------------------------------------------+
+| ``323``    | EVSE already reserved                                      |
++------------+------------------------------------------------------------+
+| ``330``    | EVSE does not support reservation                          |
 +------------+------------------------------------------------------------+
 | ``4xx``    | **Hub Errors**                                             |
 +------------+------------------------------------------------------------+

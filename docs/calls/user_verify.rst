@@ -39,6 +39,8 @@ token
     Keep this token.
     When you make future requests where the user needs to be authenticated,
     you supply this token with the request.
+evco-id (optional)
+    An EVCO ID of the user (string).
 
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
@@ -77,7 +79,8 @@ Response::
 
     {
         "user": {
-            "token": "e2af72d7a9084431ab0b1a5c42df7745"
+            "token": "e2af72d7a9084431ab0b1a5c42df7745",
+            "evco-id": "DE*8PS*123456*7"
         },
         "result": {
             "code": 0,
