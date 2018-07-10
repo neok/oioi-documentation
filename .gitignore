@@ -3,3 +3,6 @@
 
 # Vim
 *.swp
+
+# PHPStorm
+.idea/
