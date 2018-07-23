@@ -103,6 +103,9 @@ subscription-plans
         discount-percent
             Discount of total charging costs in percent (int).
 
+        session_cost_limit
+            Session cost limit. Customers should not be charged more than the cap amount for each session.
+
     dc-component
         DC component (object)
 
@@ -118,6 +121,8 @@ subscription-plans
         discount-percent
             Discount of total charging costs in percent (int).
 
+        session_cost_limit
+            Session cost limit. Customers should not be charged more than the cap amount for each session.
 
 HTTP Status codes
 ~~~~~~~~~~~~~~~~~
