@@ -19,10 +19,10 @@ members
     An array of fleet members (array of objects).
 
     fleet-member-uid
-        Id of fleet member provided by Fleet. This shall not be changed by MSP (integer).
+        Id of fleet member provided by Fleet. This shall not be changed by MSP (string; max length 100 characters).
 
     external-id (optional)
-        Fleet Owner's reference/ID for this Fleet Member. Managed by Fleet (string; max length 20 characters).
+        Fleet Owner's reference/ID for this Fleet Member. Managed by Fleet (string; max length 100 characters).
 
     contact
         Fleet member contact details (object).
@@ -70,7 +70,7 @@ members
         ISO_639-1 2 letter language code (string; length 2 characters).
 
     fleet-id
-        Fleet id of the fleet that Fleet Member belongs to (string; max length 10 characters).
+        Fleet id of the fleet that Fleet Member belongs to (string; max length 100 characters).
 
     fleet-name
         Descriptive name of the fleet (string; max length 50 characters).
@@ -80,13 +80,13 @@ members
         This will be used to associate this user to the correct Fleet where we have to send the bill for the users’ sessions, also public ones.
 
     fleet-reference-id (optional)
-        Fleet Owner's reference for this fleet (string; max length 20 characters).
+        Fleet Owner's reference for this fleet (string; max length 100 characters).
 
     evses (optional)
         List of EVSEs of the fleet member's charge points, includes reimbursement information (array of objects).
 
         fm-evse-uid
-            (integer)
+            (string; max length 100 characters)
 
         evse-id
             (string; max length 50 characters)

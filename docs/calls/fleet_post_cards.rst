@@ -34,9 +34,9 @@ fleet-cards
     array of fleet card objects
 
     fm-card-uid
-        Fleet card unique identifier. Provided by CPO. (int)
+        Fleet card unique identifier. Provided by CPO. (string; max length 100 characters)
     fleet-member-uid
-        Fleet Member unique identifier. Provided by CPO. (int)
+        Fleet Member unique identifier. Provided by CPO. (string; max length 100 characters)
     evco-id (optional)
         EVCO ID of this card. Provided by EMP. (string; length 20)
     rfid (optional)
